@@ -1,0 +1,177 @@
+/*
+   Product Catalogue Rulesets
+   ===
+*/
+.section {
+    display: flex;
+}
+
+/*
+   Cart Table Rulesets
+   ===
+*/
+
+table{
+	width: 100%;
+}
+
+th, td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 1vw;
+}
+
+th{
+	font-size: 1.2rem;
+}
+
+td{
+	font-size: 1rem;
+}
+
+
+/*
+   Links Rulesets
+   ===
+*/
+.button, a.simpleCart_increment, a.simpleCart_decrement, a.simpleCart_remove, a.item_add {
+    background-color:white;
+    border:1px solid lightgray;
+    border-radius:5px;
+    color:black;
+    margin-right:10px;
+    padding:10px 10px 10px 10px;
+    text-decoration-line: none;
+}
+
+.simpleCart_remove{
+	background: tomato !important;
+	color: white !important;
+	border:none !important;
+}
+
+.item_price {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+a.simpleCart_empty {
+    color: lightslategray;
+    font-size: 80%;
+    padding:10px 10px 10px 10px;
+}
+
+/* FAQ page */
+
+.faq-card {
+  border: 1px solid #dce0e8;
+  border-radius: 6px;
+  padding: 24px 20px;
+  margin-bottom: 12px;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq-open-icon {
+  font-size: 22px;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-weight: 700;
+}
+
+details[open] .faq-open-icon {
+  top: 18px;
+  right: 24px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  color: #0186ff;
+  font-weight: 500;
+}
+
+details[open] .faq-card-spoiler {
+  display: inline-block;
+  padding-top: 8px;
+  color: #8b8b9a;
+}
+
+.faq-aftertext {
+  text-align: center;
+  color: #8b8b9a;
+}
+
+
+a{
+	color: black;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+.intro-banner-wrap{
+  position: relative;
+}
+
+
+.icon{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+
+/* social login button */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+
+/* color palette */
+input[type="color"].circle{
+  border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+input[type="color"].circle::-moz-color-swatch{
+      border: none;
+    border-radius: 100%;  
+}
+
+
+input[type="color"].circle::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+input[type="color"].circle::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
