@@ -1,0 +1,16 @@
+{
+    "welcome":{
+        "title": "Xin chào các bạn",
+        "click": "tiếp xem"
+    }, 
+    "welcome2":{
+        "title": {
+            "0": "Chọn",
+            "1": "ngôn ngữ"
+        },
+        "comment": {
+            "0": "Chào",
+            "1": "được chuyển thành binary code dụng utf8"
+        }
+    }
+}

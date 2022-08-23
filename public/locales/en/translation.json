@@ -1,0 +1,16 @@
+{
+    "welcome":{
+        "title": "Warm welcome!",
+        "click": "Click to continue"
+    }, 
+    "welcome2":{
+        "title": {
+            "0": "Select your",
+            "1": "language!"
+        },
+        "comment": {
+            "0": "Hi",
+            "1": "is converted to binary code using utf8 encoding"
+        }
+    }
+}

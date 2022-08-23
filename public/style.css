@@ -2,6 +2,7 @@
     --vivid-pink: #F7C1B1;
     --inactive: #D5CDCB;
     --grey: #A7A7A7;
+    --black: #484848;
     --text-pink: #F08C6F;
     --mild-pink: #FFE2D9;
 }
@@ -31,6 +32,7 @@ body {
     background-color: white;
     border: none;
     border-radius: 5vh;
+    margin: 1vh;
 }
 
 .shadow {
@@ -53,27 +55,23 @@ body {
 }
 
 
-.nav {
-    border-radius: 5vh;
-}
-
-.pagination {
-    border-radius: 5vh;
-}
-
 .row {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 0 1.5vw;
     height:8%;
-
 }
 
 .lang > * {
-    color: white;
     font-weight: 400;
     font-size: 1.1rem;
+    background:none;
+    border:none;
+    margin:0;
+    margin-right: 12px;
+    padding:0;
+    cursor: pointer;
 }
 
 i{
@@ -83,4 +81,35 @@ i{
 .sns > * {
     color: white;
     padding: 8px;
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .lang > *{
+      color: var(--grey);
+  }
+
+.highlight-pink{
+    color: var(--text-pink);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.highlight-white{
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+/* no line break after p */
+p
+{
+    display: inline;
 }
