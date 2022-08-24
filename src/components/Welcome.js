@@ -1,10 +1,8 @@
-import {useState} from 'react';
-import { motion } from "framer-motion";
-import eng from "../img/en.png";
-import kr from "../img/kr.png";
-import vn from "../img/vn.png";
-import {changeLanguage} from "../index"
-import { useTranslation } from 'react-i18next';
+import { motion, useAnimation } from "framer-motion";
+import Language from "./Language"
+import {useTranslation} from 'react-i18next';
+import { useState, useEffect, useRef } from "react";
+import { click } from "@testing-library/user-event/dist/click";
 
 const Welcome = () => {
     // Welcome slide constant
@@ -23,10 +21,11 @@ const Welcome = () => {
         event.currentTarget.scrollTop = event.currentTarget.scrollHeight
     }
 
-    // click button styling
-    const [isActive, setActive] = useState({'en':true, 'kr':false, 'vn':false});
-    // multi language
-    const {t, i18n} = useTranslation();
+    // initialize const for translation
+    const { t, i18n } = useTranslation();
+
+    // lang byte animation
+    const [clicked, setClicked] = useState(false);
 
     return (
     <div onClick={moveToBottom} style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"}}>
@@ -34,12 +33,22 @@ const Welcome = () => {
             style={slideStyle}
         >
         <motion.h1 
-            style={{fontSize:"7vh"}}
-            animate = {{scale:1}}
-            initial = {{scale:0}}
-            transition={{duration:0.6, repeat:1}}
-            whileHover={{scale:1.1}}
-        ><em>{t("welcome.title")} 👋</em></motion.h1>
+            style={{fontSize:"7vh", cursor:"pointer"}}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              default: {
+                duration: 0.3,
+                ease: [0, 0.71, 0.2, 1.01]
+              },
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
+        ><em>{i18n.t("welcome.title")} 👋</em></motion.h1>
         <motion.span
             animate={{
                 y:["30%","-30%"]
@@ -47,10 +56,10 @@ const Welcome = () => {
             transition={{
                 duration:0.4,
                 yoyo: Infinity,
-                ease: "easeOut"
+                ease: "linear"
             }}
             style={{textAlign:"center", cursor:"pointer"}}
-        ><strong>Click to continue</strong><br></br> <i className="fa-solid fa-angles-down"></i></motion.span>
+        ><strong>{i18n.t("welcome.click")}</strong><br></br> <i className="fa-solid fa-angles-down"></i></motion.span>
         </motion.div>
         <div style={slideStyle}>
         <motion.h1 
@@ -58,21 +67,52 @@ const Welcome = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             variants={{
                 visible: { opacity: 1, scale: 1 },
                 hidden: { opacity: 0, scale: 0 }
             }}
-        ><em>Select your <span className='highlight-pink'>language!</span></em></motion.h1>
-      <nav className="lang" style={{height: 'fit-content'}}>
-        <button onClick={()=>changeLanguage(isActive, setActive, "en", i18n)} className={isActive['en'] ? "highlight-pink": null}>English</button>
-        <span>|</span>
-        <button onClick={()=>changeLanguage(isActive, setActive, "kr", i18n)} className={isActive['kr'] ? "highlight-pink": null} >한국어</button>
-        <span>|</span>
-        <button onClick={()=>changeLanguage(isActive, setActive, "vn", i18n)} className={isActive['vn'] ? "highlight-pink": null} >Tiếng Việt</button>
-      </nav>
-        <img alt="eng bytes" src={eng} style={{width: "25%", minWidth:"300px", opacity:"80%"}}/>
-        <p>(<p className='highlight-pink' style={{textDecoration:"none"}}>“Hello”</p> 'converted to binary code using utf8 encoding')</p>
+            transition={{
+              default: {
+                duration: 1,
+                ease: [0, 0.71, 0.2, 1.01]
+              },
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
+
+        ><em>{i18n.t("welcome2.title.0")} <span className='highlight-pink'>{i18n.t("welcome2.title.1")}</span></em></motion.h1>
+        <div onClick={()=>{
+          setClicked((clicked)=>!clicked)
+          }}
+          >
+          <Language cls={"highlight-pink"}/> 
+        </div>
+        <br></br>
+        <br></br>
+        <motion.img 
+            animate = {{
+              rotateY: clicked? [90,null] : [90,180],
+              rotateX: clicked? [10,-10,10,-10,5,-5,3,-3] : [-10,10,-10,10,-5,5,-3,3],
+              opacity: 1,
+              duration: 0.5,
+              transition:{
+                ease: "circOut",
+              }
+            }}
+            onClick={()=>{
+              setClicked((clicked)=>!clicked)
+            }}
+            alt="en bytes" 
+            src={require(`../img/${i18n.language}.png`)} 
+            style={{width: "25%", minWidth:"300px", opacity:"80%"}}
+        />
+        <br></br>
+        <br></br>
+        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span>{i18n.t("welcome2.comment.1")})</p>
         </div>
     </div>
     )

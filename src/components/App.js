@@ -1,25 +1,11 @@
-import {useState} from "react";
-import Welcome from "./components/Welcome"
-import { useTranslation } from 'react-i18next';
-import {changeLanguage} from "./index"
+import Welcome from "./Welcome"
+import Language from "./Language"
 
 function App() {
-
-  // click button styling
-  const [isActive, setActive] = useState({'en':true, 'kr':false, 'vn':false});
-  // multi language
-  const {t, i18n} = useTranslation();
-
   return (
     <div className="container">
     <div className="row">
-      <nav className="lang" style={{height: 'fit-content'}}>
-        <button onClick={()=>changeLanguage(isActive, setActive, "en", i18n)} className={isActive['en'] ? "highlight-white": null}>English</button>
-        <span>|</span>
-        <button onClick={()=>changeLanguage(isActive, setActive, "kr", i18n)} className={isActive['kr'] ? "highlight-white": null} >한국어</button>
-        <span>|</span>
-        <button onClick={()=>changeLanguage(isActive, setActive, "vn", i18n)} className={isActive['vn'] ? "highlight-white": null} >Tiếng Việt</button>
-      </nav>
+      <Language cls={"highlight-white"}/> 
       <div className="btn shadow" style={{borderRadius: '5vh'}}>
         <a href="#"><i className="fa-solid fa-house" /></a>
         <a href="#"><i className="fa-solid fa-user" /></a>
