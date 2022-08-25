@@ -2,6 +2,7 @@ import { useState } from "react";
 import Language from "./Language"
 import {useTranslation} from 'react-i18next';
 import { motion } from "framer-motion";
+import {moveToBottom, Bounce} from "../components/AnimatePage"
 
 const Welcome = () => {
     // Welcome slide constant
@@ -14,12 +15,6 @@ const Welcome = () => {
         height:"100%",
     }
 
-    // Click move down event
-    const moveToBottom = (event) => {
-        event.preventDefault();
-        event.currentTarget.scrollTop = event.currentTarget.scrollHeight
-    }
-
     // initialize const for translation
     const { t, i18n } = useTranslation();
 
@@ -27,7 +22,7 @@ const Welcome = () => {
     const [clicked, setClicked] = useState(false);
 
     return (
-    <div onClick={moveToBottom} style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"}}>
+    <div className="window-container" onClick={moveToBottom} style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"}}>
         <motion.div 
             style={slideStyle}
         >
@@ -48,17 +43,11 @@ const Welcome = () => {
               }
             }}
         ><em>{i18n.t("welcome.title")} 👋</em></motion.h1>
-        <motion.span
-            animate={{
-                y:["30%","-30%"]
-            }}
-            transition={{
-                duration:0.4,
-                yoyo: Infinity,
-                ease: "linear"
-            }}
-            style={{textAlign:"center", cursor:"pointer"}}
-        ><strong>{i18n.t("welcome.click")}</strong><br></br> <i className="fa-solid fa-angles-down"></i></motion.span>
+        <Bounce>
+        <strong>{i18n.t("welcome.click")}</strong>
+        <br></br>
+        <i style={{width:"100%", textAlign:"center"}} className="fa-solid fa-angles-down"></i>
+        </Bounce>
         </motion.div>
         <div style={slideStyle}>
         <motion.h1 
@@ -111,8 +100,7 @@ const Welcome = () => {
         />
         <br></br>
         <br></br>
-        <motion.p
-        >(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span>{i18n.t("welcome2.comment.1")})</motion.p>
+        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span>{i18n.t("welcome2.comment.1")})</p>
         </div>
     </div>
     )

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { moveToBottom } from "./AnimatePage";
 
 const Terminal = () => {
     const btnStyle = {
@@ -9,8 +11,9 @@ const Terminal = () => {
     const textGreen = {
         color: "#43CB46"
     }
+
     return (
-        <div class="terminal-container" style={{height: "30vh", width:"50vh", borderRadius:"10px", overflow:"scroll", backgroundColor:"#111827"}}>
+        <div className="terminal-container fadeUp" style={{height: "30vh", width:"40%", borderRadius:"10px", overflow:"scroll", backgroundColor:"#111827", position:"relative"}}>
             <div style={{display:"flex", alignItems:"center",height: "10%", width:"100%", backgroundColor:"#374151", padding:"3px 5px"}}>
                 <div style={{...btnStyle, backgroundColor:"tomato"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#FFBF2E"}}></div>
@@ -25,6 +28,12 @@ const Terminal = () => {
                 <br></br>
                 <span>&#125;</span>
             </div>
+            <motion.div 
+                onClick={moveToBottom}
+                initial={{ opacity: 0.7, scale: 0.9 }}
+                whileHover={{ opacity: 1, scale: 1.1 }}
+                style={{position:"absolute", bottom:"25px", right:"25px", backgroundColor: "#FFE2D9", padding:"7px 10px", borderRadius:"8px"}}
+            ><em>Click to run</em></motion.div>
         </div>
     )
 }
