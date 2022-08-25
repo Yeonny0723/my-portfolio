@@ -17,6 +17,7 @@ body {
     background-image: url("bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 1s;
 }
 
 .container {
@@ -89,7 +90,7 @@ a{
 
 ::-webkit-scrollbar {
     display: none;
-  }
+}
   
   .lang > *{
       color: var(--grey);
@@ -112,4 +113,25 @@ a{
 p
 {
     display: inline;
+}
+
+.fadeUp {
+    animation: fadeIn 0.8s linear;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+ } 
+
+i:hover{
+    color: var(--text-pink);
+    transform: scale(1.2);
 }

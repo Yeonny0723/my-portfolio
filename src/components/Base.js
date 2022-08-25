@@ -1,21 +1,24 @@
-import Welcome from "./Welcome"
 import Language from "./Language"
+import {NavLink} from 'react-router-dom';
 
-function App() {
+const Base = ({content}) => {
+  const activeStyle = {
+    color: "#F08C6F"
+  }
   return (
     <div className="container">
-    <div className="row">
+    <div className="row fadeUp">
       <Language cls={"highlight-white"}/> 
       <div className="btn shadow" style={{borderRadius: '5vh'}}>
-        <a href="#"><i className="fa-solid fa-house" /></a>
-        <a href="#"><i className="fa-solid fa-user" /></a>
-        <a href="#"><i className="fa-solid fa-folder" /></a>
+        <NavLink  className={(navData)=> navData.isActive ? "highlight-pink" : null }to="/"><i className="fa-solid fa-house" /></NavLink>
+        <NavLink  className={(navData)=> navData.isActive ? "highlight-pink" : null }to="/profile"><i className="fa-solid fa-user" /></NavLink>
+        <NavLink  className={(navData)=> navData.isActive ? "highlight-pink" : null }to="/portfolio"><i className="fa-solid fa-folder" /></NavLink>
       </div>
     </div>
     <div className="window shadow">
-      <Welcome style={{width: '100%', height: '100%'}}/>
+      {content}
     </div>
-    <div className="row">
+    <div className="row fadeUp">
       <div className="sns" style={{height: '60%'}}>
         <a href="#"><i className="fa-brands fa-github fa-2xl" /></a>
         <a href="#"><i className="fa-brands fa-instagram fa-2xl" /></a>
@@ -30,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default Base;

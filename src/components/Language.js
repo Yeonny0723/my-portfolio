@@ -1,6 +1,5 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import {useTranslation} from 'react-i18next';
-import i18n from "../i18n"
 
 const Language = ({cls}) => {
     // cls: a class name to highlight button on onclick event
@@ -23,11 +22,11 @@ const Language = ({cls}) => {
 
     return (
       <nav className="lang" style={{height: 'fit-content'}}>
-        <button onClick={()=>changeLanguage('en')} className={isActive['en'] ? cls: null}>English</button>
+        <button onClick={()=>changeLanguage('en')} className={window.isActive['en'] ? cls: null}>English</button>
         <span>|</span>
-        <button onClick={()=>changeLanguage('kr')} className={isActive['kr'] ? cls: null} >한국어</button>
+        <button onClick={()=>changeLanguage('kr')} className={window.isActive['kr'] ? cls: null} >한국어</button>
         <span>|</span>
-        <button onClick={()=>changeLanguage('vn')} className={isActive['vn'] ? cls: null} >Tiếng Việt</button>
+        <button onClick={()=>changeLanguage('vn')} className={window.isActive['vn'] ? cls: null} >Tiếng Việt</button>
       </nav>
     )
 }

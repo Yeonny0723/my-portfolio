@@ -1,8 +1,7 @@
-import { motion, useAnimation } from "framer-motion";
+import { useState } from "react";
 import Language from "./Language"
 import {useTranslation} from 'react-i18next';
-import { useState, useEffect, useRef } from "react";
-import { click } from "@testing-library/user-event/dist/click";
+import { motion } from "framer-motion";
 
 const Welcome = () => {
     // Welcome slide constant
@@ -112,7 +111,8 @@ const Welcome = () => {
         />
         <br></br>
         <br></br>
-        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span>{i18n.t("welcome2.comment.1")})</p>
+        <motion.p
+        >(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span>{i18n.t("welcome2.comment.1")})</motion.p>
         </div>
     </div>
     )
