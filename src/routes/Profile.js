@@ -10,7 +10,7 @@ const Profile = () => {
         alignItems:"center", 
         justifyContent: "space-between",
         height:"100%",
-        padding: "0 5%",
+        padding: "0 15%",
     }
     const content = (
         <div className="window-container" style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"

@@ -1,12 +1,12 @@
 const TimeLine = ({date, title, content}) => {
     return (
-        <li class="timeline-item">
-            <div class="timeline-info">
+        <li className="timeline-item">
+            <div className="timeline-info">
                 <span>{date}</span>
             </div>
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-                <h3 class="timeline-title">{title}</h3>
+            <div className="timeline-marker"></div>
+            <div className="timeline-content">
+                <h3 className="timeline-title">{title}</h3>
                 <p>{content}</p>
             </div>
         </li>

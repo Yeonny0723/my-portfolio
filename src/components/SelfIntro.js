@@ -1,3 +1,5 @@
+import { moveToBottom } from "./AnimatePage";
+
 const SelfIntro = () => {
     return (
         <div className="fadeUp">
@@ -10,7 +12,7 @@ const SelfIntro = () => {
                 but above all, I enjoy all the creation with new technology!<br></br>
                 Feel free to reach out to me if you want to know me more ! <br></br>
                 <br></br>
-                Press <em style={{color:"#F08C6F"}}>"Click to run"</em> button to find me out more!
+                Press <em onClick={moveToBottom} style={{color:"#F08C6F"}}>"Click to run"</em> button to find me out more!
                 </p>
             </div>
             <div className="history">
