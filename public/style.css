@@ -44,7 +44,7 @@ body {
     background-color: white;
     width: fit-content;
     block-size: fit-content;
-    padding: 10px 15px;
+    padding: 5px 8px;
     display:flex;
 }
 
@@ -145,64 +145,58 @@ i:hover{
 
 p{
     line-height: 150%;
-    font-size: 1.3rem;
 }
 
-h1{
-    font-size: 4vh;
-}
-
-h2{
-    font-size: 3vh;
-}
-
-
-/* profile */
+/* timeline */
 .timeline-item {
     padding-left: 40px;
     position: relative;
-  }
-  .timeline-item:last-child {
-    padding-bottom: 0;
-  }
-  
-  .timeline-marker {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 15px;
-  }
-  .timeline-marker:before {
-    width: 15px;
-    height: 15px;
-    background: var(--text-pink);
-    border: 3px solid transparent;
-    border-radius: 100%;
-    content: "";
-    display: block;
-    height: 15px;
-    position: absolute;
-    top: 4px;
-    left: 0;
-    width: 15px;
-    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
-  }
-  .timeline-marker:after {
-    content: "";
-    width: 3px;
-    background: var(--inactive);
-    display: block;
-    position: absolute;
-    top: 24px;
-    bottom: 0;
-    left: 6px;
-  }
-  .timeline-item:last-child .timeline-marker:after {
-    content: none;
-  }
-  
-  .timeline-item:not(.period):hover .timeline-marker:before {
-    background: transparent;
-    border: 3px solid var(--text-pink);
-  }
+}
+
+.timeline-item:last-child {
+padding-bottom: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.history-container > *{
+    margin-bottom: 7vh;
+}
+
+.timeline-marker:before {
+width: 15px;
+height: 15px;
+background: var(--text-pink);
+border: 3px solid transparent;
+border-radius: 100%;
+content: "";
+display: block;
+height: 15px;
+position: absolute;
+top: 4px;
+left: 0;
+width: 15px;
+transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.timeline-marker:after {
+content: "";
+width: 3px;
+background: var(--inactive);
+display: block;
+position: absolute;
+top: 36px;
+bottom: 0;
+left: 9px;
+}
+
+.timeline-item:last-child .timeline-marker:after {
+content: none;
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+background: transparent;
+border: 3px solid var(--text-pink);
+}

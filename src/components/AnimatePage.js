@@ -72,3 +72,23 @@ export const Bounce = ({children}) => {
   </motion.div>
   )
 }
+
+export const BounceUp = ({children}) => {
+  const transitionValues = {
+    duration: 0.5,
+    yoyo: Infinity,
+    ease: "easeInOut",
+  };
+  return(
+  <motion.div
+    transition={{
+      delay: 0.5,
+      y: transitionValues,
+    }}
+    animate={{
+      y: ["0rem","-1rem"],
+    }}
+  >{children}
+  </motion.div>
+  )
+}

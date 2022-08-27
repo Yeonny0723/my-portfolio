@@ -1,4 +1,4 @@
-import { moveToBottom } from "./AnimatePage";
+import { moveToBottom, BounceUp } from "./AnimatePage";
 
 const SelfIntro = () => {
     return (
@@ -11,8 +11,16 @@ const SelfIntro = () => {
                 I have a strong passion for Web development and Data engineering, <br></br>
                 but above all, I enjoy all the creation with new technology!<br></br>
                 Feel free to reach out to me if you want to know me more ! <br></br>
+                </p>
                 <br></br>
-                Press <em onClick={moveToBottom} style={{color:"#F08C6F"}}>"Click to run"</em> button to find me out more!
+                <p style={{display:"flex"}}>
+                Press &nbsp;
+                <em onClick={moveToBottom} style={{color:"#F08C6F"}}>
+                    <BounceUp>
+                    "Click to run"
+                    </BounceUp>
+                </em> 
+                &nbsp; button to find me out more!
                 </p>
             </div>
             <div className="history">

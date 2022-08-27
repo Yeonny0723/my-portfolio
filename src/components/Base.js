@@ -15,18 +15,18 @@ const Base = ({content}) => {
     </div>
     {window.location.pathname === '/' ? 
       <UpSlide>
-        <div id="window" className="shadow" style={{height:"70vh"}}>
+        <div id="window" className="shadow" style={{height:"76vh"}}>
           {content}
         </div>
       </UpSlide> : <>
       {window.location.pathname === '/profile' ?
       <LeftSlide>
-        <div id="window" className="shadow" style={{height:"70vh"}}>
+        <div id="window" className="shadow" style={{height:"76vh"}}>
           {content}
         </div>
       </LeftSlide> :
       <RightSlide>
-        <div id="window" className="shadow" style={{height:"70vh"}}>
+        <div id="window" className="shadow" style={{height:"76vh"}}>
           {content}
         </div>
       </RightSlide>

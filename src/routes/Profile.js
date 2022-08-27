@@ -7,19 +7,19 @@ const Profile = () => {
     // Slide 
     const slideStyle = {
         display:"flex", 
-        alignItems:"center", 
-        justifyContent: "space-between",
+        flexDirection:"column",
+        justifyContent: "center",
+        alignItems: "center",
         height:"100%",
-        padding: "0 15%",
     }
     const content = (
-        <div className="window-container" style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"
-        }}>
-            <div style={slideStyle}>
+        <div className="window-container" style={{display:"flex", justifyContent:"space-between",
+        width: "86%", height: "80%" , padding:"5% 7%"}}>
+            <div style={{...{slideStyle}, overflow:"scroll", scrollBehavior:"smooth", width:"45%", fontSize:"0.8rem"}}>
                 <SelfIntro/>
                 <Terminal/> 
             </div>
-            <div style={slideStyle}>
+            <div style={{...{slideStyle}, overflow:"scroll", scrollBehavior:"smooth", width:"50%", height:"100%", fontSize:"0.8rem"}}>
                 <History/>
             </div>
         </div>
