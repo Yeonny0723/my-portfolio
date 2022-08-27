@@ -72,7 +72,7 @@ const Welcome = () => {
               }
             }}
 
-        ><em>{i18n.t("welcome2.title.0")} <span className='highlight-pink'>{i18n.t("welcome2.title.1")}</span></em></motion.h1>
+        ><em>{i18n.t("welcome2.title.0")} <span className='highlight-pink'> {i18n.t("welcome2.title.1")}</span></em></motion.h1>
         <div onClick={()=>{
           setClicked((clicked)=>!clicked)
           }}
@@ -100,7 +100,7 @@ const Welcome = () => {
         />
         <br></br>
         <br></br>
-        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span>{i18n.t("welcome2.comment.1")})</p>
+        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span> {i18n.t("welcome2.comment.1")})</p>
         </div>
     </div>
     )

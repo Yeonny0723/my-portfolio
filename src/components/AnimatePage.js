@@ -92,3 +92,10 @@ export const BounceUp = ({children}) => {
   </motion.div>
   )
 }
+
+
+export const OnBlur = (e) => {
+  const target = document.getElementsByClassName("history-container")[0]
+  target.classList.toggle("blur")
+  target.classList.toggle("fadeUp")
+}

@@ -12,6 +12,7 @@ const Profile = () => {
         alignItems: "center",
         height:"100%",
     }
+
     const content = (
         <div className="window-container" style={{display:"flex", justifyContent:"space-between",
         width: "86%", height: "80%" , padding:"5% 7%"}}>
@@ -24,6 +25,7 @@ const Profile = () => {
             </div>
         </div>
     )
+
     return (
         <Base content={content} /> 
     );

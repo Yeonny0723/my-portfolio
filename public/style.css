@@ -200,3 +200,8 @@ content: none;
 background: transparent;
 border: 3px solid var(--text-pink);
 }
+
+
+.blur{
+    filter: blur(6px)
+}

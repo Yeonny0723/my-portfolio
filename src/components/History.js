@@ -6,12 +6,16 @@ const History = () => {
         fontStyle:"italic",
         fontSize:"0.7rem",
     }
+
     return (
-        
-        <div class="history-container" style={{width:"100%", padding: "0 5%"}}>
+        <div class="history-container blur" style={{
+            width:"100%", 
+            padding: "0 5%",
+            // filter: `${blurred ? "blur(6px)" : null}`
+            }}>
                 {/* Experience */}
                 <div>
-                    <h2 style={{marginBottom:"0", marginTop:"0"}}>Experience</h2>
+                    <h2 style={{marginBottom:"0", marginTop:"10px"}}>Experience</h2>
                     <div className="underline"></div>
                     <ul style={{listStyle:"none", padding:"0"}}>
                         <Timeline date={"Dec 2021 - April 2022 [5mos]"} title={"Balinne Full-stack freelancer"} content={"Full stack web"}/>

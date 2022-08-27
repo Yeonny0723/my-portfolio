@@ -1,4 +1,4 @@
-import { moveToBottom, BounceUp } from "./AnimatePage";
+import { BounceUp } from "./AnimatePage";
 
 const SelfIntro = () => {
     return (
@@ -15,7 +15,7 @@ const SelfIntro = () => {
                 <br></br>
                 <p style={{display:"flex"}}>
                 Press &nbsp;
-                <em onClick={moveToBottom} style={{color:"#F08C6F"}}>
+                <em style={{color:"#F08C6F"}}>
                     <BounceUp>
                     "Click to run"
                     </BounceUp>

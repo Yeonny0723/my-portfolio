@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { moveToBottom } from "./AnimatePage";
+import { OnBlur } from "./AnimatePage";
+
 
 const Terminal = () => {
     const btnStyle = {
@@ -55,16 +56,21 @@ const Terminal = () => {
                 <br></br>
                 {/* print */}
                 <Spacing white={"juyeon = Juyeon();"} green={""} num="1"/>
-                <Spacing white={"juyeon.age_setter = 23"} green={""} num="1"/>
-                <Spacing white={"juyeon.about_me()"} green={""} num="1"/>
+                <Spacing white={"juyeon.age_setter = 23;"} green={""} num="1"/>
+                <Spacing white={"juyeon.about_me();"} green={""} num="1"/>
 
             </div>
             <motion.div 
-                onClick={moveToBottom}
+                onClick={OnBlur}
                 initial={{ opacity: 0.7, scale: 1 }}
                 whileHover={{ opacity: 1, scale: 1.1, x:-20 }}
                 style={{position:"sticky", bottom:"25px", display:"flex",justifyContent:"end", margin:"0 20px"}}>
-                <em style={{ width: "70px", backgroundColor: "#FFE2D9", padding:"7px 10px", borderRadius:"8px"}}>
+                <em style={{ 
+                    width: "70px", 
+                    backgroundColor: "#FFE2D9", 
+                    padding:"7px 10px", 
+                    borderRadius:"8px",
+                }}>
                     Click to run
                 </em>
             </motion.div>
