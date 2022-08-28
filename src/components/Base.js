@@ -15,7 +15,7 @@ const Base = ({content}) => {
     </div>
     {window.location.pathname === '/' ? 
       <UpSlide>
-        <div id="window" className="shadow" style={{height:"76vh"}}>
+        <div id="window" className="shadow">
           {content}
         </div>
       </UpSlide> : <>
@@ -35,9 +35,10 @@ const Base = ({content}) => {
   }
     <div className="row">
       <div className="sns" style={{height: '60%'}}>
-        <a href="#"><i className="fa-brands fa-github fa-2xl" /></a>
-        <a href="#"><i className="fa-brands fa-instagram fa-2xl" /></a>
-        <a href="#"><i className="fa-solid fa-envelope fa-2xl" /></a>
+        <a target="_blank" href="https://github.com/Yeonny0723"><i className="fa-brands fa-github fa-2xl" /></a>
+        <a target="_blank" href="https://www.linkedin.com/in/juyeon-kim-6a227a207/"><i class="fab fa-linkedin-in fa-2xl"></i></a>
+        <a target="_blank" href="mailto:kkjuyeon@gmail.com"><i className="fa-solid fa-envelope fa-2xl" /></a>
+
       </div>
       <div className="btn shadow" style={{borderRadius: '5vh'}}>
         <a href="#"><i className="fa-solid fa-caret-left fa-2xl" /></a>

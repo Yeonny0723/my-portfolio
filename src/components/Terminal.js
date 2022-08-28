@@ -63,10 +63,10 @@ const Terminal = () => {
             <motion.div 
                 onClick={OnBlur}
                 initial={{ opacity: 0.7, scale: 1 }}
-                whileHover={{ opacity: 1, scale: 1.1, x:-20 }}
+                whileHover={{ opacity: 1, scale: 1.2, x:-50 }}
                 style={{position:"sticky", bottom:"25px", display:"flex",justifyContent:"end", margin:"0 20px"}}>
                 <em style={{ 
-                    width: "70px", 
+                    width: "fit-content", 
                     backgroundColor: "#FFE2D9", 
                     padding:"7px 10px", 
                     borderRadius:"8px",
