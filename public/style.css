@@ -161,6 +161,7 @@ i:hover{
     height: 6px;
     background-color: var(--inactive);
     margin-bottom: 20px;
+    opacity: 50%;
 }
 
 p{
@@ -237,4 +238,17 @@ border: 3px solid var(--text-pink);
     height: 100vh;
     background-color: rgba(0,0,0,0.2);
     z-index: 5;
+}
+
+h4{
+    margin-bottom: 0;
+}
+
+.card{
+    transition: opacity .3s;
+}
+
+.card:hover{
+    transform: scale(0.98);
+    opacity: 0.75;
 }

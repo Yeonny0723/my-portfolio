@@ -8,7 +8,7 @@ const History = () => {
     }
 
     return (
-        <div class="history-container blur" style={{
+        <div className="history-container blur" style={{
             width:"100%", 
             padding: "0 5%",
             // filter: `${blurred ? "blur(6px)" : null}`

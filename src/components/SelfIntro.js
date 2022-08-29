@@ -9,8 +9,8 @@ const SelfIntro = () => {
                 <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;Hi there 👋 This is Juyeon, a fresh graduate from RMIT University. <br></br>
                 I have a strong passion for backend development and Data engineering, <br></br>
-                but above all, I enjoy all the creation with new technology!<br></br>
-                Feel free to reach out to me if you want to know me more ! <br></br>
+                but above all, I enjoy all the creation with new technology !<br></br>
+                Feel free to reach out to me if you want to find me out more 😎<br></br>
                 </p>
                 <br></br>
                 <p style={{display:"flex"}}>
