@@ -2,7 +2,7 @@ import { useState } from "react";
 import Language from "./Language"
 import {useTranslation} from 'react-i18next';
 import { motion } from "framer-motion";
-import {moveToBottom, Bounce} from "../components/AnimatePage"
+import {moveToBottom, Bounce, UpSlide} from "../components/AnimatePage"
 
 const Welcome = () => {
     // Welcome slide constant
@@ -44,7 +44,7 @@ const Welcome = () => {
             }}
         ><em>{i18n.t("welcome.title")} 👋</em></motion.h1>
         <Bounce>
-        <strong>{i18n.t("welcome.click")}</strong>
+        <strong style={{cursor:"pointer",}}>{i18n.t("welcome.click")}</strong>
         <br></br>
         <i style={{width:"100%", textAlign:"center"}} className="fa-solid fa-angles-down"></i>
         </Bounce>
@@ -80,7 +80,6 @@ const Welcome = () => {
           <Language cls={"highlight-pink"}/> 
         </div>
         <br></br>
-        <br></br>
         <motion.img 
             animate = {{
               rotateY: clicked? [90,null] : [90,180],
@@ -94,13 +93,13 @@ const Welcome = () => {
             onClick={()=>{
               setClicked((clicked)=>!clicked)
             }}
-            alt="en bytes" 
+            alt="byte img"
             src={require(`../img/${i18n.language}.png`)} 
             style={{width: "25%", minWidth:"300px", opacity:"80%"}}
         />
         <br></br>
-        <br></br>
         <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span> {i18n.t("welcome2.comment.1")})</p>
+        <br></br>
         </div>
     </div>
     )

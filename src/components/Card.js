@@ -28,18 +28,19 @@ const Card = (props) => {
                 style={{
                     padding: "3rem 5rem",
                     boxShadow: "0px 5px 10px rgba(0,0,0,0.2)",
-                    backgroundColor: "white",
+                    backgroundColor: `${isOpen? "white" : "rgba(0,0,0,0.15)"}`,
                     borderRadius: "2rem",
                     color: `${isOpen? "black" : "white"}`,
-                    backgroundImage: `${isOpen? `url("")` : `url(${props.props.img})`}`,
+                    backgroundImage: `${isOpen? `url("")` : `url(${props.props.thumbnail})`}`,
+                    backgroundSize: "cover",
                     zIndex:"10",
-                    width: `${isOpen? "70vw" : "100%"}`,
-                    height: `${isOpen? "55vh" : "30vh"}`,
+                    width: `${isOpen? "72vw" : "100%"}`,
+                    height: `${isOpen? "59vh" : "30vh"}`,
                     position: `${isOpen? "fixed" : "static"}`,
                     top: `${isOpen? "25%" : null}`,
                     left: `${isOpen? "15%" : null}`,
                     overflow: "scroll",
-                    textShadow: "1px 1px 5px rgba(0,0,0,0.2)",
+                    textShadow: `${isOpen? "1px 1px 2px rgba(0,0,0,0.1)" :"2px 2px 10px rgba(0,0,0,1)"}`,
                 }}>
                 <motion.h2 
                     layout="position"
@@ -66,26 +67,29 @@ const Card = (props) => {
                     </div>
                     <div 
                         style={{width:"55%", backgroundColor:"#FCFCFC", padding:"1% 3.5%",}}>
-                        <h3 style={{marginBottom:"0"}}>Description</h3>
+                        <h2 style={{marginBottom:"0"}}>Description</h2>
                         <div className="underline"></div>
                         {/* Project summary */}
                         <div>
-                            <a href={props.props.link} target="_blank"><i className="fa-solid fa-code fa-sm" style={{color:"#F08C6F"}}></i> &nbsp;Demo</a>
+                            <a href={props.props.link} target="_blank" style={{color:"#F08C6F"}}><i className="fa-solid fa-code fa-sm"></i> &nbsp;Demo</a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span><i className="fa-solid fa-calendar-days fa-lg" style={{color:"#F08C6F"}}></i> &nbsp;{props.props.timeline}</span>
-                            <h4><em># Summary</em></h4>
+                            <h3><em># Summary</em></h3>
                             <p style={pStyle}>{props.props.desc}</p>
                         </div>
+                        <br></br>
                         {/* Used skills */}
                         <div>
-                            <h4><em># Skills</em></h4>
+                            <h3><em># Skills</em></h3>
                             <p>{props.props.skills}</p>
                         </div>
+                        <br></br>
                         {/* Takeaway */}
                         <div>
-                            <h4><em># Takeaway</em></h4>
+                            <h3><em># Takeaway</em></h3>
                             <p>{props.props.takeaway}</p>
                         </div>
+                        <br></br>
                     </div>
                 </motion.div> 
                 }

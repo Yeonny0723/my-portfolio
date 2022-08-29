@@ -6,20 +6,21 @@ const Language = ({cls}) => {
 
     const [isActive, setActive] = useState(window.isActive); 
     // click button styling
-    const toggleClass = (lang) => {
-      if (isActive[lang] === false){
-        setActive({...{'en':false, 'kr':false, 'vn':false}, [lang]:true});
-        window.isActive = isActive;
-      }
+    const addClass = (lang) => {
+      const renewed = {'en':false, 'kr':false, 'vn':false}
+      renewed[lang] = true
+      setActive(renewed);
+      window.isActive = renewed;
     };
 
     // multi language
     const { t, i18n } = useTranslation();
     const changeLanguage = (lang) => {
       i18n.changeLanguage(lang);
-      toggleClass(lang);
+      addClass(lang);
     }  
 
+    console.log("window.isActive", window.isActive)
     return (
       <nav className="lang" style={{height: 'fit-content'}}>
         <button onClick={()=>changeLanguage('en')} className={window.isActive['en'] ? cls: null}>English</button>

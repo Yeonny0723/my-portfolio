@@ -18,11 +18,21 @@ const History = () => {
                     <h2 style={{marginBottom:"0", marginTop:"10px"}}>Experience</h2>
                     <div className="underline"></div>
                     <ul style={{listStyle:"none", padding:"0"}}>
-                        <Timeline date={"Dec 2021 - April 2022 [5mos]"} title={"Balinne Full-stack freelancer"} content={"Full stack web"}/>
+                        <Timeline date={"Dec 2021 - April 2022 [5mos]"} title={"Balinne Full-stack freelancer"} content={<ul>
+                            <li>To create an E-commerce website from scratch</li>
+                        </ul>}/>
                         <br></br>
-                        <Timeline date={"Oct 2021 - Dec 2021 [2mos]"} title={"UN Research Volunteer"} content={"Python project"}/>
+                        <Timeline date={"Oct 2021 - Dec 2021 [2mos]"} title={"UN Research Volunteer"} content={<ul>
+                            <li>Data collection: examined the 2 countries' (South Korea, Australia) digital governments and assessed the websites in terms of web design, contents, and UI/UX to see if they are fulfilling the principles. </li>
+                            <li>Peer data verification: verified and validated the assessments by the researchers to check discrepancies</li>
+                        </ul>}/>
                         <br></br>
-                        <Timeline date={"Aug 2021 - Nov 2021 [4mos]"} title={"Data Science Intern"} content={"Python project"}/>
+                        <Timeline date={"Aug 2021 - Nov 2021 [4mos]"} title={"Data Science Intern"} content={<ul>
+                            <li>Collect 10 millions of text and image data in a very short amount of time</li>
+                            <li>Preprocess the text data by identifying & removing patterns of stop words with creative approach for the improved model accuracy</li>
+                            <li>Create an NLP model with TF-IDF and Mecab</li>
+                            <li>Responsible for designing and managing data with MySQL</li>
+                        </ul>}/>
                     </ul>
                 </div>
                 {/* Skills */}
@@ -65,12 +75,16 @@ const History = () => {
                         <Timeline date={"July 2018 - June 2022"} title={"Majored Information systems at RMIT"} content={
                             <span>
                                 <span>GPA: 3.8/4.0</span> <br></br>
-                                <span>Explore my <a style={{color:"tomato"}} target="_blank" href="https://yeonny-kim.notion.site/RMIT-Uni-Information-Systems-924373c5ff5446e08e9558e566e4f527"><em>COURSEWORK</em></a></span>
+                                <span>Explore my <a style={{color:"#F7C1B1"}} target="_blank" href="https://yeonny-kim.notion.site/RMIT-Uni-Information-Systems-924373c5ff5446e08e9558e566e4f527"><em>COURSEWORK</em></a></span>
                             </span>
                             }/>
                         <br></br>
                         <Timeline date={"May 2021 - Aug 2021"} title={"Likelion AI school"} content={
-                        ""}/>
+                            <span>Explore my 
+                                <br></br>
+                                <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Titanic-data-modelling/blob/main/0705_semi2_Titanic_modeling_v1.ipynb"><em>COURSEWORK</em></a> | <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Company-recommendation-system"><em>COURSEWORK</em></a>
+                            </span>
+                        }/>
                     </ul>
                 </div>
                 {/* Certifications */}

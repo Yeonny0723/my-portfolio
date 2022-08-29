@@ -70,6 +70,7 @@ const Terminal = () => {
                     backgroundColor: "#FFE2D9", 
                     padding:"7px 10px", 
                     borderRadius:"8px",
+                    cursor:"pointer",
                 }}>
                     Click to run
                 </em>
