@@ -5,6 +5,7 @@ import {LeftSlide, RightSlide, UpSlide} from "./AnimatePage";
 const Base = ({content}) => {
   return (
     <div className="container">
+    <div id="screen-inactive"></div>
     <div className="row">
       <Language cls={"highlight-white"}/> 
       <div className="btn shadow" style={{borderRadius: '5vh'}}>
