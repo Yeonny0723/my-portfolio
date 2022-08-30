@@ -12,7 +12,7 @@ const Welcome = () => {
         justifyContent:"center", 
         alignItems:"center", 
         width:"100%", 
-        height:"58vh",
+        height:"60vh",
     }
 
     // initialize const for translation
