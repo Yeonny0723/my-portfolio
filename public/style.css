@@ -63,7 +63,7 @@ h5{
     margin:0;
 }
 p, span{
-    font-size: calc(3px + 0.8vw) !important;
+    font-size: calc(2.5px + 0.8vw) !important;
 }
 
 #background{
