@@ -5,11 +5,8 @@ const ScreenWarning = () => {
     return (
       <div id="rotate-warning"
       style={{
-        height:"100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         visibility: "hidden",
+        height: "0",
       }}>
         <Rotate360>
         <h3>

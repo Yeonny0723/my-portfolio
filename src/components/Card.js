@@ -26,7 +26,7 @@ const Card = (props) => {
                 layout 
                 onClick={onClick}
                 style={{
-                    padding: "1.5vw 4vw",
+                    padding: "2.5vw 5vw",
                     boxShadow: "0px 5px 10px rgba(0,0,0,0.2)",
                     backgroundColor: `${isOpen? "white" : "rgba(0,0,0,0.15)"}`,
                     borderRadius: "2rem",
@@ -42,9 +42,9 @@ const Card = (props) => {
                     overflow: "scroll",
                     textShadow: `${isOpen? "1px 1px 2px rgba(0,0,0,0.1)" :"2px 2px 10px rgba(0,0,0,1)"}`,
                 }}>
-                <motion.h5 
+                <motion.h4 
                     layout="position"
-                ><em>{props.props.title} ></em></motion.h5>
+                ><em>{props.props.title} </em></motion.h4>
                 {isOpen &&
                 <motion.div 
                     className="expand"

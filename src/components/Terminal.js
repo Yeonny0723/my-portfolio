@@ -23,8 +23,8 @@ const Terminal = () => {
     }
 
     return (
-        <div className="terminal-container fadeUp shadow" style={{height: "30vh", width:"100%", borderRadius:"2vh", overflow:"scroll", backgroundColor:"#111827", position:"relative"}}>
-            <div style={{display:"flex", alignItems:"center", height: "15%", width:"100%", backgroundColor:"#374151", padding:"min(1.5vh, 5px)", position:"sticky", top:"0"}}>
+        <div className="terminal-container fadeUp shadow" style={{height: "30vh", width:"100%", borderRadius:"10px", overflow:"scroll", backgroundColor:"#111827", position:"relative"}}>
+            <div style={{display:"flex", alignItems:"center", height: "15%", width:"100%", backgroundColor:"#374151", borderRadius:"10px", padding:"min(1.5vh, 5px)", position:"sticky", top:"0"}}>
                 <div style={{...btnStyle, backgroundColor:"tomato"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#FFBF2E"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#27CA40"}}></div>
