@@ -99,3 +99,34 @@ export const OnBlur = (e) => {
   target.classList.toggle("blur")
   target.classList.toggle("fadeUp")
 }
+
+
+export const Rotate360 = ({children}) => {
+    return(
+      <motion.div
+      style={{
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center",
+          fontWeight:"600",
+          color:"white",
+          height:"100%",
+          textShadow:"5px 5px 5px rgba(0,0,0,0.2)",
+      }}
+      initial={{ scale: 0 }}
+      animate={{ rotate: 360, scale:1 }}
+      transition={{
+        repeat: Infinity,
+        repeatDelay: 2,
+        ease: "easeInOut",
+        type: "spring",
+        stiffness: 100,
+        scale: {
+            duration: 1,
+          },
+      }}
+      >
+        {children}
+      </motion.div>
+    )
+}

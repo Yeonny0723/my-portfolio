@@ -1,10 +1,12 @@
 import Language from "./Language"
 import {NavLink} from 'react-router-dom';
-import {LeftSlide, RightSlide, UpSlide} from "./AnimatePage";
+import {LeftSlide, RightSlide, UpSlide, Bounce} from "./AnimatePage";
+import ScreenWarning from "../components/Warning";
 
 const Base = ({content}) => {
   return (
     <div className="container">
+      <ScreenWarning id={"rotate-warning"}/>
     <div id="screen-inactive"></div>
     <div className="row">
       <Language cls={"highlight-white"}/> 

@@ -20,7 +20,6 @@ const Language = ({cls}) => {
       addClass(lang);
     }  
 
-    console.log("window.isActive", window.isActive)
     return (
       <nav className="lang" style={{height: 'fit-content'}}>
         <button onClick={()=>changeLanguage('en')} className={window.isActive['en'] ? cls: null}>English</button>

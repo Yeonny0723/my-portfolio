@@ -41,6 +41,8 @@ const Card = (props) => {
                     left: `${isOpen? "15%" : null}`,
                     overflow: "scroll",
                     textShadow: `${isOpen? "1px 1px 2px rgba(0,0,0,0.1)" :"2px 2px 10px rgba(0,0,0,1)"}`,
+                    // display: "flex",
+                    // justifyContent: "center",
                 }}>
                 <motion.h2 
                     layout="position"

@@ -139,8 +139,8 @@ const Portfolio = () => {
         marginBottom: "4vh",
     }
     const content = (
-        <div className="card-container" style={{ paddingTop:"6vh", height:"100%", overflow: "scroll"}}>
-            <div className="page-title" style={{ position:"fixed", marginTop:"-9vh", zIndex:"10"}}>
+        <div className="window-container" style={{ paddingTop:"10vh", height:"100%", overflow: "scroll"}}>
+            <div className="page-title" style={{ position:"fixed", marginTop:"-12vh", zIndex:"10"}}>
                 <h1 style={{marginBottom:0}}>Portfolio</h1>
                 <div className="underline"></div>
             </div>
