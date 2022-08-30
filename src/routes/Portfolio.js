@@ -1,19 +1,19 @@
 import Base from "../components/Base"
 import Card from "../components/Card";
 
-import proj_0_thumbnail from "../img/proj_0_thumbnail.png"
-import proj_0_preview from "../img/proj_0_preview.png"
+import proj_0_thumbnail from "../img/proj_0_thumbnail.jpeg"
+import proj_0_preview from "../img/proj_0_preview.jpeg"
 
-import proj_1_preview from "../img/proj_1_preview.png"
+import proj_1_preview from "../img/proj_1_preview.jpeg"
 
-import proj_2_preview from "../img/proj_2_preview.png"
+import proj_2_preview from "../img/proj_2_preview.jpeg"
 
-import proj_3_preview from "../img/proj_3_preview.png"
+import proj_3_preview from "../img/proj_3_preview.jpeg"
 
-import proj_4_thumbnail from "../img/proj_4_thumbnail.png"
+import proj_4_thumbnail from "../img/proj_4_thumbnail.jpeg"
 
-import proj_5_thumbnail from "../img/proj_5_thumbnail.png"
-import proj_5_preview from "../img/proj_5_thumbnail.png"
+import proj_5_thumbnail from "../img/proj_5_thumbnail.jpeg"
+import proj_5_preview from "../img/proj_5_thumbnail.jpeg"
 
 
 
