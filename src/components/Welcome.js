@@ -12,7 +12,7 @@ const Welcome = () => {
         justifyContent:"center", 
         alignItems:"center", 
         width:"100%", 
-        height:"100%",
+        height:"58vh",
     }
 
     // initialize const for translation
@@ -44,14 +44,15 @@ const Welcome = () => {
             }}
         ><em>{i18n.t("welcome.title")} 👋</em></motion.h1>
         <Bounce>
-        <strong style={{cursor:"pointer",}}>{i18n.t("welcome.click")}</strong>
-        <br></br>
+        <h5  style={{cursor:"pointer", margin:"0"}}>
+          {i18n.t("welcome.click")}
+        </h5>
         <i style={{width:"100%", textAlign:"center"}} className="fa-solid fa-angles-down"></i>
         </Bounce>
         </motion.div>
-        <div style={slideStyle}>
-        <motion.h1 
-            style={{fontSize:"5vh"}}
+        <div style={{...slideStyle, justifyContent:"space-around"}}>
+        <motion.h2 
+            style={{fontSize:"5vh", margin:"0"}}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -72,14 +73,13 @@ const Welcome = () => {
               }
             }}
 
-        ><em>{i18n.t("welcome2.title.0")} <span className='highlight-pink'> {i18n.t("welcome2.title.1")}</span></em></motion.h1>
+        ><em>{i18n.t("welcome2.title.0")} <em className='highlight-pink'> {i18n.t("welcome2.title.1")}</em></em></motion.h2>
         <div onClick={()=>{
           setClicked((clicked)=>!clicked)
           }}
           >
           <Language cls={"highlight-pink"}/> 
         </div>
-        <br></br>
         <motion.img 
             animate = {{
               rotateY: clicked? [90,null] : [90,180],
@@ -95,11 +95,9 @@ const Welcome = () => {
             }}
             alt="byte img"
             src={require(`../img/${i18n.language}.png`)} 
-            style={{width: "25%", minWidth:"300px", opacity:"80%"}}
+            style={{width: "25%", minWidth:"50px", opacity:"80%"}}
         />
-        <br></br>
         <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span> {i18n.t("welcome2.comment.1")})</p>
-        <br></br>
         </div>
     </div>
     )

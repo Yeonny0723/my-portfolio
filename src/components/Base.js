@@ -36,8 +36,8 @@ const Base = ({content}) => {
       }
       </>
     }
-    <div className="row">
-      <div className="sns" style={{height: '60%'}}>
+    <div className="row" style={{alignItems: "flex-start"}}>
+      <div className="sns" style={{paddingTop:"1.5vh"}}>
         <a target="_blank" href="https://github.com/Yeonny0723"><i className="fa-brands fa-github fa-2xl" /></a>
         <a target="_blank" href="https://www.linkedin.com/in/juyeon-kim-6a227a207/"><i className="fab fa-linkedin-in fa-2xl"></i></a>
         <a target="_blank" href="mailto:kkjuyeon@gmail.com"><i className="fa-solid fa-envelope fa-2xl" /></a>

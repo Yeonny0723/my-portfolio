@@ -129,7 +129,6 @@ const props_1 = [
     },
 ]
 
-
 const Portfolio = () => {
     const styleCardRow = {    
         display:"flex",
@@ -139,9 +138,9 @@ const Portfolio = () => {
         marginBottom: "4vh",
     }
     const content = (
-        <div className="window-container" style={{ paddingTop:"10vh", height:"100%", overflow: "scroll"}}>
-            <div className="page-title" style={{ position:"fixed", marginTop:"-12vh", zIndex:"10"}}>
-                <h1 style={{marginBottom:0}}>Portfolio</h1>
+        <div className="window-container" style={{overflow:"scroll", height:"100%"}}>
+            <div className="page-title">
+                <h3 style={{margin:0}}>Portfolio</h3>
                 <div className="underline"></div>
             </div>
             <div className="fadeUp" style={styleCardRow}>

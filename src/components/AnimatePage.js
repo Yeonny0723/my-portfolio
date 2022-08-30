@@ -66,7 +66,7 @@ export const Bounce = ({children}) => {
       y: transitionValues,
     }}
     animate={{
-      y: ["2rem","4rem"],
+      y: ["2vh","6vh"],
     }}
   >{children}
   </motion.div>

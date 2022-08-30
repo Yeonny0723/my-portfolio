@@ -1,6 +1,6 @@
 import {Rotate360} from "../components/AnimatePage";
 
-const ScreenWarning = ({id}) => {
+const ScreenWarning = () => {
 
     return (
       <div id="rotate-warning"
@@ -13,10 +13,10 @@ const ScreenWarning = ({id}) => {
         height: "0",
       }}>
         <Rotate360>
-        <span>
+        <h3>
           Your screen is too small 🥲 <br></br>
           Please rotate your device 🌱
-        </span>
+        </h3>
         </Rotate360>
       </div>
     )

@@ -26,7 +26,7 @@ const Card = (props) => {
                 layout 
                 onClick={onClick}
                 style={{
-                    padding: "3rem 5rem",
+                    padding: "1.5vw 4vw",
                     boxShadow: "0px 5px 10px rgba(0,0,0,0.2)",
                     backgroundColor: `${isOpen? "white" : "rgba(0,0,0,0.15)"}`,
                     borderRadius: "2rem",
@@ -41,13 +41,10 @@ const Card = (props) => {
                     left: `${isOpen? "15%" : null}`,
                     overflow: "scroll",
                     textShadow: `${isOpen? "1px 1px 2px rgba(0,0,0,0.1)" :"2px 2px 10px rgba(0,0,0,1)"}`,
-                    // display: "flex",
-                    // justifyContent: "center",
                 }}>
-                <motion.h2 
+                <motion.h4 
                     layout="position"
-                ><em>{props.props.title} ></em></motion.h2>
-                <br></br>
+                ><em>{props.props.title} ></em></motion.h4>
                 {isOpen &&
                 <motion.div 
                     className="expand"
@@ -69,26 +66,26 @@ const Card = (props) => {
                     </div>
                     <div 
                         style={{width:"55%", backgroundColor:"#FCFCFC", padding:"1% 3.5%",}}>
-                        <h2 style={{marginBottom:"0"}}>Description</h2>
+                        <h4 style={{marginBottom:"0"}}>Description</h4>
                         <div className="underline"></div>
                         {/* Project summary */}
                         <div>
-                            <a href={props.props.link} target="_blank" style={{color:"#F08C6F"}}><i className="fa-solid fa-code fa-sm"></i> &nbsp;Demo</a>
+                            <a href={props.props.link} target="_blank" style={{color:"#F08C6F"}}><span><i className="fa-solid fa-code fa-sm"></i> &nbsp;Demo</span></a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <span><i className="fa-solid fa-calendar-days fa-lg" style={{color:"#F08C6F"}}></i> &nbsp;{props.props.timeline}</span>
-                            <h3><em># Summary</em></h3>
+                            <span><i className="fa-solid fa-calendar-days fa-lg" style={{color:"#F08C6F", marginBottom:"5vh"}}></i> &nbsp;{props.props.timeline}</span>
+                            <h5><em># Summary</em></h5>
                             <p style={pStyle}>{props.props.desc}</p>
                         </div>
                         <br></br>
                         {/* Used skills */}
                         <div>
-                            <h3><em># Skills</em></h3>
+                            <h5><em># Skills</em></h5>
                             <p>{props.props.skills}</p>
                         </div>
                         <br></br>
                         {/* Takeaway */}
                         <div>
-                            <h3><em># Takeaway</em></h3>
+                            <h5><em># Takeaway</em></h5>
                             <p>{props.props.takeaway}</p>
                         </div>
                         <br></br>

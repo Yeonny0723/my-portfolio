@@ -5,9 +5,9 @@ import { OnBlur } from "./AnimatePage";
 const Terminal = () => {
     const btnStyle = {
         borderRadius:"100%",
-        marginLeft: "10px",
-        width:"15px",
-        height:"15px",
+        marginLeft: "min(1vw, 10px)",
+        width: "min(1.5vw, 15px)",
+        height: "min(1.5vw, 15px)",
     }
     const textGreen = {
         color: "#43CB46"
@@ -24,12 +24,12 @@ const Terminal = () => {
 
     return (
         <div className="terminal-container fadeUp shadow" style={{height: "30vh", width:"100%", borderRadius:"10px", overflow:"scroll", backgroundColor:"#111827", position:"relative"}}>
-            <div style={{display:"flex", alignItems:"center", height: "15%", width:"100%", backgroundColor:"#374151", padding:"5px", position:"sticky", top:"0"}}>
+            <div style={{display:"flex", alignItems:"center", height: "15%", width:"100%", backgroundColor:"#374151", padding:"min(1.5vh, 5px)", position:"sticky", top:"0"}}>
                 <div style={{...btnStyle, backgroundColor:"tomato"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#FFBF2E"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#27CA40"}}></div>
             </div>
-            <div style={{width:"100%", color:"white", padding:"15px", display:"flex", flexDirection:"column"}}>
+            <div style={{width:"100%", color:"white", padding:"1vh", display:"flex", flexDirection:"column"}}>
                 <Spacing white={"class Juyeon: "} num="1"/>
                 {/* init */}
                 <Spacing white={"def __init__(self): "} num="2"/>
@@ -64,15 +64,17 @@ const Terminal = () => {
                 onClick={OnBlur}
                 initial={{ opacity: 0.7, scale: 1 }}
                 whileHover={{ opacity: 1, scale: 1.2, x:-50 }}
-                style={{position:"sticky", bottom:"25px", display:"flex",justifyContent:"end", margin:"0 20px"}}>
+                style={{position:"sticky", bottom:"4vh", display:"flex",justifyContent:"end", margin:"0 2vw"}}>
                 <em style={{ 
                     width: "fit-content", 
                     backgroundColor: "#FFE2D9", 
-                    padding:"7px 10px", 
-                    borderRadius:"8px",
+                    padding:"1vh 1vw",
+                    borderRadius:"0.8vw",
                     cursor:"pointer",
+                    display:"flex",
+                    justifyContent:"center",
                 }}>
-                    Click to run
+                    <span>Click to run</span>
                 </em>
             </motion.div>
         </div>

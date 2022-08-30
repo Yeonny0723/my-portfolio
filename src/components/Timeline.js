@@ -6,7 +6,7 @@ const TimeLine = ({date, title, content}) => {
             </div>
             <div className="timeline-marker"></div>
             <div className="timeline-content">
-                <h3 className="timeline-title">{title}</h3>
+                <h6 className="timeline-title">{title}</h6>
                 <span>{content}</span>
             </div>
         </li>
