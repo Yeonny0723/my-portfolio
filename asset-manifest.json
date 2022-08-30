@@ -1,22 +1,21 @@
 {
   "files": {
-    "main.js": "/my-portfolio/static/js/main.d90c4086.js",
-    "static/media/proj_0_preview.png": "/my-portfolio/static/media/proj_0_preview.99b85a48764e16632dcc.png",
-    "static/media/proj_5_thumbnail.png": "/my-portfolio/static/media/proj_5_thumbnail.7dc3130edba23770b3a0.png",
-    "static/media/proj_2_preview.png": "/my-portfolio/static/media/proj_2_preview.8b67138805035eb6bbfb.png",
-    "static/media/proj_4_thumbnail.png": "/my-portfolio/static/media/proj_4_thumbnail.6b21189ce2d77ac9143b.png",
-    "static/media/proj_0_thumbnail.png": "/my-portfolio/static/media/proj_0_thumbnail.aa653df41983aef9ac1e.png",
-    "static/media/proj_1_preview.png": "/my-portfolio/static/media/proj_1_preview.407743b3506a6b2cbfc1.png",
-    "static/media/proj_3_preview.png": "/my-portfolio/static/media/proj_3_preview.e665844cfae4a4b4b39c.png",
-    "static/media/proj_5_preview.png": "/my-portfolio/static/media/proj_5_preview.55b2c16d1f543c48a6d5.png",
+    "main.js": "/my-portfolio/static/js/main.e913aa14.js",
+    "static/media/proj_0_preview.jpeg": "/my-portfolio/static/media/proj_0_preview.99b85a48764e16632dcc.jpeg",
+    "static/media/proj_5_thumbnail.jpeg": "/my-portfolio/static/media/proj_5_thumbnail.7dc3130edba23770b3a0.jpeg",
+    "static/media/proj_2_preview.jpeg": "/my-portfolio/static/media/proj_2_preview.8b67138805035eb6bbfb.jpeg",
+    "static/media/proj_4_thumbnail.jpeg": "/my-portfolio/static/media/proj_4_thumbnail.6b21189ce2d77ac9143b.jpeg",
+    "static/media/proj_0_thumbnail.jpeg": "/my-portfolio/static/media/proj_0_thumbnail.aa653df41983aef9ac1e.jpeg",
+    "static/media/proj_1_preview.jpeg": "/my-portfolio/static/media/proj_1_preview.407743b3506a6b2cbfc1.jpeg",
+    "static/media/proj_3_preview.jpeg": "/my-portfolio/static/media/proj_3_preview.e665844cfae4a4b4b39c.jpeg",
     "static/media/kr.png": "/my-portfolio/static/media/kr.e832bd8b4b1e20a031f8.png",
     "static/media/en.png": "/my-portfolio/static/media/en.a7c377177e61b84c8a92.png",
     "static/media/vn.png": "/my-portfolio/static/media/vn.2293f7b982d5ae15e71c.png",
     "index.html": "/my-portfolio/index.html",
     "static/media/getFetch.cjs": "/my-portfolio/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.d90c4086.js.map": "/my-portfolio/static/js/main.d90c4086.js.map"
+    "main.e913aa14.js.map": "/my-portfolio/static/js/main.e913aa14.js.map"
   },
   "entrypoints": [
-    "static/js/main.d90c4086.js"
+    "static/js/main.e913aa14.js"
   ]
 }
