@@ -117,7 +117,7 @@ export const Rotate360 = ({children}) => {
       animate={{ rotate: 360, scale:1 }}
       transition={{
         repeat: Infinity,
-        repeatDelay: 2,
+        repeatDelay: 1,
         ease: "easeInOut",
         type: "spring",
         stiffness: 100,
