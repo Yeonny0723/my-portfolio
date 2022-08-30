@@ -42,9 +42,9 @@ const Card = (props) => {
                     overflow: "scroll",
                     textShadow: `${isOpen? "1px 1px 2px rgba(0,0,0,0.1)" :"2px 2px 10px rgba(0,0,0,1)"}`,
                 }}>
-                <motion.h4 
+                <motion.h5 
                     layout="position"
-                ><em>{props.props.title} ></em></motion.h4>
+                ><em>{props.props.title} ></em></motion.h5>
                 {isOpen &&
                 <motion.div 
                     className="expand"

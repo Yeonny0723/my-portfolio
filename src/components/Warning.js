@@ -10,7 +10,6 @@ const ScreenWarning = () => {
         justifyContent: "center",
         alignItems: "center",
         visibility: "hidden",
-        height: "0",
       }}>
         <Rotate360>
         <h3>
