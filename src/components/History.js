@@ -18,19 +18,20 @@ const History = () => {
                     <div className="underline"></div>
                     <ul style={{listStyle:"none", padding:"0"}}>
                         <Timeline date={"Dec 2021 - April 2022 [5mos]"} title={"Balinne Full-stack freelancer"} content={<ul>
-                            <li><p>To create an E-commerce website from scratch</p></li>
+                            <li><p>Developed the responsive e-commerce website from scratch reflecting the ordering and payment use cases.</p></li>
+                            <li><p>Conducted an iterative approach to elicit clients’ functional and non-functional requirements, design an ERD database, and write a functional specification.</p></li>
                         </ul>}/>
                         <br></br>
                         <Timeline date={"Oct 2021 - Dec 2021 [2mos]"} title={"UN Research Volunteer"} content={<ul>
-                            <li><p>Data collection: examined the 2 countries' (South Korea, Australia) digital governments and assessed the websites in terms of web design, contents, and UI/UX to see if they are fulfilling the principles. </p></li>
-                            <li><p>Peer data verification: verified and validated the assessments by the researchers to check discrepancies</p></li>
+                            <li><p>Assessed South Korean & Australian digital e-governmence website</p></li>
+                            <li><p>Verified the peer assessments and checked the discrepancies</p></li>
                         </ul>}/>
                         <br></br>
                         <Timeline date={"Aug 2021 - Nov 2021 [4mos]"} title={"Data Science Intern"} content={<ul>
-                            <li><p>Collect 10 millions of text and image data in a very short amount of time</p></li>
-                            <li><p>Preprocess the text data by identifying & removing patterns of stop words with creative approach for the improved model accuracy</p></li>
-                            <li><p>Create an NLP model with TF-IDF and Mecab</p></li>
-                            <li><p>Responsible for designing and managing data with MySQL</p></li>
+                            <li><p>Scrapped and pre-processed 10 millions of text and image data with Python OOP reusable code in a very short amount of time</p></li>
+                            <li><p>Increased model accuracy by 5% by identifying and removing stop word patterns</p></li>
+                            <li><p>Created an optimal NLP model using TF-IDF and Mecab</p></li>
+                            <li><p>Designed and conducted CRUD operations on the database using MySQL</p></li>
                         </ul>}/>
                     </ul>
                 </div>
@@ -43,16 +44,20 @@ const History = () => {
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
                     <br></br>
-                    {/* Back-end */}
+                    <hr></hr>
+                    {/* Back-en
+                    <hr></hr>d */}
                     <p style={tagStyle}>#Backend</p><br></br>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"/>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"/>
                     <br></br>
+                    <hr></hr>
                     {/* Front-end */}
                     <p style={tagStyle}>#Frontend</p><br></br>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
                     <br></br>
+                    <hr></hr>
                     {/* Data engineering
                     <p style={tagStyle}>#Data engineering</p><br></br>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"/>
@@ -63,6 +68,40 @@ const History = () => {
                     <p style={tagStyle}>#DB & Hosting</p><br></br>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
                     <img style={{height:"max(20px,5vh)"}} src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+                    <br></br>
+                    <hr></hr>
+                    {/* Language */}
+                    <p style={tagStyle}>#Languages</p><br></br>
+                    <div style={{display:"flex", width:"100%", justifyContent:"space-between"}}>
+                        <span>English 🇺🇸</span>
+                        <div style={{display:"flex"}}>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-empty"></div>
+                        </div>
+                    </div>
+                    <div style={{display:"flex", width:"100%", justifyContent:"space-between"}}>
+                        <span>Korean 🇰🇷 </span>
+                        <div style={{display:"flex"}}>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                        </div>
+                    </div>
+                    <div style={{display:"flex", width:"100%", justifyContent:"space-between"}}>
+                        <span>Vietnamese 🇻🇳 </span>
+                        <div style={{display:"flex"}}>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-filled"></div>
+                            <div className="dot-empty"></div>
+                            <div className="dot-empty"></div>
+                        </div>
+                    </div>
                     <br></br>
                 </div>
                 

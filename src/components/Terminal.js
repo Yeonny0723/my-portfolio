@@ -34,20 +34,22 @@ const Terminal = () => {
                 {/* init */}
                 <Spacing white={"def __init__(self): "} num="2"/>
                 <Spacing white={"self.name: "} green={'"Juyeon Kim"'} num="3"/>
-                <Spacing white={"self.__age: "} green={'"shhh"'} num="3"/>
+                <Spacing white={"self.age: "} green={'23'} num="3"/>
+                <Spacing white={"self.__mbti: "} green={'"shhh"'} num="3"/>
                 <Spacing white={"self.email: "} green={'"kkjuyeon@gmail.com"'} num="3"/>
-                <Spacing white={"self.nationality: "} green={'"South korea"'} num="3"/>
+                <Spacing white={"self.nationality: "} green={'"South Korea"'} num="3"/>
                 <Spacing white={"self.favorite_algorithm: "} green={'"Greedy algorithm"'} num="3"/>
+                <Spacing white={"self.hobby: "} green={'"Weekly walking challenge, cafe tour"'} num="3"/>
                 <br></br>
                 {/* age getter */}
                 <Spacing white={"@property"} green={""} num="2"/>
-                <Spacing white={"def age_getter(self):"} green={""} num="2"/>
-                <Spacing white={"return self.__age"} green={""} num="3"/>
+                <Spacing white={"def mbti_getter(self):"} green={""} num="2"/>
+                <Spacing white={"return self.__mbti"} green={""} num="3"/>
                 <br></br>
                 {/* age setter */}
-                <Spacing white={"@age_getter.setter"} green={""} num="2"/>
-                <Spacing white={"def age_setter(self, age):"} green={""} num="2"/>
-                <Spacing white={"self.__age = age"} green={""} num="3"/>
+                <Spacing white={"@mbti_getter.setter"} green={""} num="2"/>
+                <Spacing white={"def age_setter(self, mbti):"} green={""} num="2"/>
+                <Spacing white={"self.__mbti = mbti"} green={""} num="3"/>
                 <br></br>
                 {/* about  me */}
                 <Spacing white={"@staticmethod"} green={""} num="2"/>
@@ -56,7 +58,7 @@ const Terminal = () => {
                 <br></br>
                 {/* print */}
                 <Spacing white={"juyeon = Juyeon();"} green={""} num="1"/>
-                <Spacing white={"juyeon.age_setter = 23;"} green={""} num="1"/>
+                <Spacing white={'juyeon.mbti_setter = "ENTJ";'} green={""} num="1"/>
                 <Spacing white={"juyeon.about_me();"} green={""} num="1"/>
 
             </div>

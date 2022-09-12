@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Language from "./Language"
 import {useTranslation} from 'react-i18next';
 import { motion } from "framer-motion";
 import {moveToBottom, Bounce, UpSlide} from "../components/AnimatePage"
+import {NavLink} from 'react-router-dom';
+import { use } from "i18next";
 
 const Welcome = () => {
     // Welcome slide constant
@@ -20,6 +22,11 @@ const Welcome = () => {
 
     // lang byte animation
     const [clicked, setClicked] = useState(false);
+
+
+    // show if a lang was at least clicked once
+    const [firstClicked, setFirstClicked] = useState(false);
+
 
     return (
     <div className="window-container" onClick={moveToBottom} style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"}}>
@@ -75,7 +82,8 @@ const Welcome = () => {
 
         ><em>{i18n.t("welcome2.title.0")} <em className='highlight-pink'> {i18n.t("welcome2.title.1")}</em></em></motion.h2>
         <div onClick={()=>{
-          setClicked((clicked)=>!clicked)
+          setClicked((clicked)=>!clicked);
+          setFirstClicked(true);
           }}
           >
           <Language cls={"highlight-pink"}/> 
@@ -98,6 +106,13 @@ const Welcome = () => {
             style={{width: "25%", minWidth:"50px", opacity:"80%"}}
         />
         <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span> {i18n.t("welcome2.comment.1")})</p>
+        {firstClicked?
+          <Bounce>
+            <NavLink to="/profile"><i style={{width:"100%", textAlign:"center", color:"grey"}} className="fa-solid fa-angles-down"></i></NavLink>
+          </Bounce>
+        : 
+          <div></div>
+        }
         </div>
     </div>
     )

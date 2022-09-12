@@ -231,7 +231,7 @@ li {
 }
 
 /* red dot flag */
-.timeline-marker:before {
+.timeline-marker:before, .dot-filled, .dot-empty{
 width: min(1.2vh, 15px);
 height: min(1.2vh, 15px);
 background: var(--text-pink);
@@ -245,7 +245,19 @@ left: 0;
 transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.timeline-marker:after {
+.dot-filled{
+    position: static;
+    margin: 0 2px;
+}
+
+.dot-empty{
+    position: static;
+    margin: 0 2px;
+    background: var(--inactive) !important;
+}
+
+
+.timeline-marker:after{
 content: "";
 width: 3px;
 background: var(--inactive);
@@ -255,6 +267,7 @@ top: 36px;
 bottom: 0;
 left: min(1vh, 9px);
 }
+
 
 .timeline-item:last-child .timeline-marker:after {
 content: none;
@@ -299,7 +312,16 @@ h6{
     opacity: 0.7;
 }
 
-
-li {
-    /* line-height: 1.2rem; */
+ul{
+    list-style-position: inside;
+    -webkit-padding-start: 0;
 }
+
+hr {
+    border:none;
+    border-top:1px dashed var(--grey);
+    color:#fff;
+    background-color:#fff;
+    height:1px;
+    width:100%;
+  }
