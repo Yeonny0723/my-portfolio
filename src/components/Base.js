@@ -16,13 +16,13 @@ const Base = ({content}) => {
         <NavLink className={(navData)=> navData.isActive ? "highlight-pink" : null }to="/portfolio"><i className="fa-solid fa-folder" /></NavLink>
       </div>
     </div>
-    {window.location.pathname === '/' ? 
+    {window.location.pathname === '/my-portfolio/' ? 
       <UpSlide>
         <div id="window" className="shadow">
           {content}
         </div>
       </UpSlide> : <>
-      {window.location.pathname === '/profile' ?
+      {window.location.pathname === '/my-portfolio/profile' ?
       <LeftSlide>
         <div id="window" className="shadow" style={{height:"76vh"}}>
           {content}

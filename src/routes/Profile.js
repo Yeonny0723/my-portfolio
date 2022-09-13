@@ -3,6 +3,7 @@ import Terminal from "../components/Terminal"
 import SelfIntro from "../components/SelfIntro"
 import History from "../components/History"
 
+
 const Profile = () => {
     // Slide 
     const slideStyle = {

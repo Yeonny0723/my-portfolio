@@ -16,8 +16,6 @@ import proj_5_thumbnail from "../img/proj_5_thumbnail.jpeg"
 import proj_5_preview from "../img/proj_5_thumbnail.jpeg"
 
 
-
-
 const props_0 = [
     // Balinne web shopping mall
     {
