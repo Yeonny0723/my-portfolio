@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { OnBlur } from "./AnimatePage";
 
-
 const Terminal = () => {
     const btnStyle = {
         borderRadius:"100%",
@@ -79,6 +78,8 @@ const Terminal = () => {
                     <span>Click to run</span>
                 </em>
             </motion.div>
+            <a href="/files/new_resume.docx" download>Click to download</a>
+            
         </div>
     )
 }
