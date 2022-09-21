@@ -28,7 +28,7 @@ const Terminal = () => {
                 <div style={{...btnStyle, backgroundColor:"#FFBF2E"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#27CA40"}}></div>
             </div>
-            <div style={{width:"100%", color:"white", padding:"1vh", display:"flex", flexDirection:"column"}}>
+            <div className="terminal-code" style={{width:"100%", color:"white", padding:"1vh", display:"flex", flexDirection:"column"}}>
                 <Spacing white={"class Juyeon: "} num="1"/>
                 {/* init */}
                 <Spacing white={"def __init__(self): "} num="2"/>

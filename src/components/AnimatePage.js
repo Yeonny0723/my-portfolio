@@ -68,6 +68,10 @@ export const Bounce = ({children}) => {
     animate={{
       y: ["-1.5vh","2.5vh"],
     }}
+    style={{
+      width:"100%",
+      textAlign:"center"
+    }}
   >{children}
   </motion.div>
   )
