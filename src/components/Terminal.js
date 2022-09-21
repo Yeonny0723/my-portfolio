@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { OnBlur } from "./AnimatePage";
 
 const Terminal = () => {
     const btnStyle = {
@@ -22,7 +21,7 @@ const Terminal = () => {
     }
 
     return (
-        <div className="terminal-container fadeUp shadow" style={{height: "30vh", width:"100%", borderRadius:"10px", overflow:"scroll", backgroundColor:"#111827", position:"relative"}}>
+        <div className="terminal-container fadeUp shadow" style={{height: "35vh", width:"100%", borderRadius:"10px", overflow:"scroll", backgroundColor:"#111827", position:"relative"}}>
             <div style={{display:"flex", alignItems:"center", height: "15%", width:"100%", borderRadius:"10px 10px 0px 0px", backgroundColor:"#374151", padding:"min(1.5vh, 5px)", overflow:"hidden", position:"sticky", top:"0"}}>
                 <div style={{...btnStyle, backgroundColor:"tomato"}}></div>
                 <div style={{...btnStyle, backgroundColor:"#FFBF2E"}}></div>
@@ -38,7 +37,7 @@ const Terminal = () => {
                 <Spacing white={"self.email: "} green={'"kkjuyeon@gmail.com"'} num="3"/>
                 <Spacing white={"self.nationality: "} green={'"South Korea"'} num="3"/>
                 <Spacing white={"self.favorite_algorithm: "} green={'"Greedy algorithm"'} num="3"/>
-                <Spacing white={"self.hobby: "} green={'"Weekly walking challenge, cafe tour"'} num="3"/>
+                <Spacing white={"self.hobby: "} green={'"Weekly tracking challenge, cafe tour"'} num="3"/>
                 <br></br>
                 {/* age getter */}
                 <Spacing white={"@property"} green={""} num="2"/>
@@ -62,7 +61,6 @@ const Terminal = () => {
 
             </div>
             <motion.div 
-                onClick={OnBlur}
                 initial={{ opacity: 0.7, scale: 1 }}
                 whileHover={{ opacity: 1, scale: 1.2, x:-50 }}
                 style={{position:"sticky", bottom:"4vh", display:"flex",justifyContent:"end", margin:"0 2vw"}}>
@@ -75,11 +73,9 @@ const Terminal = () => {
                     display:"flex",
                     justifyContent:"center",
                 }}>
-                    <span>Click to run</span>
+                    <a href="#history-container"><span style={{color:"black"}}>Click to run</span></a>
                 </em>
             </motion.div>
-            <a href="/files/new_resume.docx" download>Click to download</a>
-            
         </div>
     )
 }

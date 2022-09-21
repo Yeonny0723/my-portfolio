@@ -9,6 +9,10 @@ const History = () => {
     }
 
     const [pins, setPins] = useState({
+        "stories": false,
+        "main": false,
+        "memorable": false,
+        "strength": false,
         "experience": false,
         "skills": false,
         "education": false,
@@ -26,10 +30,73 @@ const History = () => {
     },[pins]);
 
     return (
-        <div className="history-container blur" style={{
-            width:"100%", 
-            padding: "0 5%",
+        <div id="history-container" style={{
+            minHeight:"100%",
+            height: "fit-content",
+            display:"flex", 
+            flexDirection:"column",
+            justifyContent:"center",
             }}>
+                {/* My stories */}
+                {/* <div>
+                    {pins["stories"]?
+                    <a onClick={()=>clickPin("stories")}>
+                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 My story</h3>
+                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
+                            <p>...</p>
+                        </div>
+                    </a>:
+                    <a onClick={()=>clickPin("stories")} style={{opacity: "40%"}}>
+                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 My Story</h3>
+                    </a>
+                    }
+                </div> */}
+
+                {/* Main field */}
+                {/* <div>
+                    {pins["main"]?
+                    <a onClick={()=>clickPin("main")}>
+                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Main field</h3>
+                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
+                            <p>...</p>
+                        </div>
+                    </a>:
+                    <a onClick={()=>clickPin("main")} style={{opacity: "40%"}}>
+                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 Main field</h3>
+                    </a>
+                    }
+                </div> */}
+
+                {/* Memorable project */}
+                {/* <div>
+                    {pins["memorable"]?
+                    <a onClick={()=>clickPin("memorable")}>
+                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Memorable project</h3>
+                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
+                            <p>...</p>
+                        </div>
+                    </a>:
+                    <a onClick={()=>clickPin("memorable")} style={{opacity: "40%"}}>
+                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 Memorable project</h3>
+                    </a>
+                    }
+                </div> */}
+
+                {/* My strength */}
+                {/* <div>
+                    {pins["strength"]?
+                    <a onClick={()=>clickPin("strength")}>
+                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 My strength</h3>
+                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
+                            <p>...</p>
+                        </div>
+                    </a>:
+                    <a onClick={()=>clickPin("strength")} style={{opacity: "40%"}}>
+                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 My strength</h3>
+                    </a>
+                    }
+                </div> */}
+
                 {/* Experience */}
                 <div>
                     {pins["experience"]?

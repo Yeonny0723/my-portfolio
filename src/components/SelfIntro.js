@@ -10,7 +10,7 @@ const SelfIntro = () => {
                     <br></br>
                     Hi there 👋 This is Juyeon, a fresh graduate who...
                     <ul>
-                    <li>have a strong passion for <strong>backend development / Data engineering </strong>but enjoy all creation with new technology 😎</li>
+                    <li>have a strong passion for <strong>Backend development / Data engineering </strong>but enjoy all creation with new technology 😎</li>
                     <li>is very <strong>goal-oriented</strong> and has a strong <strong>growth needs</strong></li>
                     <li><strong>constantly learn and study</strong> to be a better me in an open manner</li>
                     <li>is <strong>a fast learner</strong> and can work at <strong>a very fast pace</strong></li>
@@ -20,17 +20,22 @@ const SelfIntro = () => {
                     </ul>
                 <br></br>
                     </p>
-                    <p style={{display:"flex"}}>
-                    Press &nbsp;
-                    <em style={{color:"#F08C6F"}}>
-                        <BounceUp>
-                        "Click to run"
-                        </BounceUp>
-                    </em> 
-                    &nbsp;button below to find me out more ↓
-                    </p>
                 </div>
-                <div className="history">
+                <div style={{display:"flex"}}>
+                <div className="custom-btn" style={{marginRight: "2vw"}}>
+                    {/* <a href="/files/new_resume.docx" download> */}
+                        <p>
+                            <i class="fa-regular fa-file fa-lg"></i>&nbsp;Resume (.eng)
+                        </p>
+                    {/* </a> */}
+                </div>
+                <div className="custom-btn">
+                    {/* <a href="/files/new_resume.docx" download> */}
+                        <p>
+                            <i class="fa-regular fa-file fa-lg"></i>&nbsp;Resume (.kr)
+                        </p>
+                    {/* </a> */}
+                </div>
                 </div>
             </div>
     )

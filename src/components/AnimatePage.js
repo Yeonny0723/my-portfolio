@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
 
-
-export const moveToBottom = (event) => {
-  event.preventDefault();
-  const totalHeight = document.getElementById("window").scrollHeight;
-  const windowContainer = document.getElementsByClassName("window-container");
-  windowContainer[0].scrollTop = totalHeight;
-}
-
 export const LeftSlide = ({ children }) => {
   return (
     <motion.div
@@ -97,12 +89,6 @@ export const BounceUp = ({children}) => {
   )
 }
 
-
-export const OnBlur = (e) => {
-  const target = document.getElementsByClassName("history-container")[0]
-  target.classList.toggle("blur")
-  target.classList.toggle("fadeUp")
-}
 
 
 export const Rotate360 = ({children}) => {

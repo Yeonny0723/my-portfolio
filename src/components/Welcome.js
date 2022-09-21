@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Language from "./Language"
 import {useTranslation} from 'react-i18next';
 import { motion } from "framer-motion";
-import {moveToBottom, Bounce, UpSlide} from "../components/AnimatePage"
+import {Bounce, UpSlide} from "../components/AnimatePage"
 import {NavLink} from 'react-router-dom';
-import { use } from "i18next";
 
 const Welcome = () => {
     // Welcome slide constant
@@ -29,7 +28,7 @@ const Welcome = () => {
 
 
     return (
-    <div className="window-container" onClick={moveToBottom} style={{width:"100%", height:"100%", overflow:"scroll", scrollBehavior:"smooth"}}>
+    <div className="window-container" style={{width:"100%", height:"100%", overflow:"scroll"}}>
         <motion.div 
             style={slideStyle}
         >
@@ -51,14 +50,17 @@ const Welcome = () => {
             }}
         ><em>{i18n.t("welcome.title")} 👋</em></motion.h1>
         <Bounce>
+        <a href="#home-lang" style={{color:"black"}}>
         <h5  style={{cursor:"pointer", margin:"0"}}>
           {i18n.t("welcome.click")}
         </h5>
         <i style={{width:"100%", textAlign:"center"}} className="fa-solid fa-angles-down"></i>
+        </a>
         </Bounce>
         </motion.div>
         <div style={{...slideStyle, justifyContent:"space-around"}}>
         <motion.h2 
+            id="home-lang"
             style={{fontSize:"5vh", margin:"0"}}
             initial="hidden"
             whileInView="visible"

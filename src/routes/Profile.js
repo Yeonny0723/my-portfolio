@@ -1,10 +1,10 @@
 import Base from "../components/Base"
 import Terminal from "../components/Terminal"
-import SelfIntro from "../components/SelfIntro"
 import History from "../components/History"
+import SelfIntro from "../components/SelfIntro"
 import Typewriter from 'typewriter-effect'
 import { useEffect, useState } from "react"
-
+import { BounceUp } from "../components/AnimatePage";
 
 const Profile = () => {
     // Slide 
@@ -28,7 +28,7 @@ const Profile = () => {
 
     const typeConst = ['be a changemaker', 'solve a big world problem']
     const content = (
-        <div className="window-container" style={{height:"100%", overflow:"hidden"}}>
+        <div className="window-container" style={{height:"100%", overflow:"scroll"}}>
             {showElement?
             <div className="profileMessage fadeUp" style={{width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
                 <h2 style={{margin:"0", marginBottom:"5vh"}}><em>This is Juyeon</em> 👩‍💻</h2>
@@ -54,17 +54,26 @@ const Profile = () => {
             null:
                 <div style={{display:"flex", justifyContent:"space-between", alignItems:"center",
             width: "100%", height:"100%"}}>
-                    <div style={{...{slideStyle}, width:"45%", fontSize:"0.9rem",height: "100%",
+                    <div style={{...{slideStyle}, width:"45%", fontSize:"0.9rem",
             overflow: "scroll"}}>
                         <SelfIntro/>
-                        <Terminal/> 
                     </div>
-                    <div style={{...{slideStyle},width:"50%", fontSize:"0.8rem", height: "100%",
+                    <div style={{...{slideStyle},width:"50%", fontSize:"0.8rem",
             overflow: "scroll"}}>
-                        <History/>
+                    <p style={{display:"flex"}}>
+                    Press &nbsp;
+                    <em style={{color:"#F08C6F"}}>
+                        <BounceUp>
+                        "Click to run"&nbsp;
+                        </BounceUp>
+                    </em> 
+                    &nbsp;button below to find me out more ↓
+                    </p>
+                        <Terminal/> 
                     </div>
                 </div>
             }
+            <History/>
         </div>
         // Copyright (c) 2022 by Yeonny Kim (https://codepen.io/yeonny0723/pen/wvjeVdm)
         // Fork of an original work CSS Typing Effect (https://codepen.io/denic/pen/GRoOxbM
