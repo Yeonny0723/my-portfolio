@@ -23,7 +23,7 @@ const Profile = () => {
     useEffect(()=>{
         setTimeout(function(){
             setShowElement(false)
-            }, 8000);
+            }, 0);
     },[])
 
     const typeConst = ['be a changemaker', 'solve a big world problem']
