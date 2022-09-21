@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+html, #window, .window-container{
+    scroll-behavior:smooth !important;
+}
+
+
 body {
     height: 100vh;
     width: 100vw;
@@ -52,6 +57,9 @@ i{
 h1{
     font-size: calc(6px + 4vw) !important;
 }
+h2{
+    font-size: calc(6px + 3vw) !important;
+}
 h3{
     font-size: calc(6px + 1.5vw) !important;
 }
@@ -62,8 +70,8 @@ h5{
     font-size: calc(4px + 0.7vw) !important;
     margin:0;
 }
-p, span{
-    font-size: calc(2.5px + 0.8vw) !important;
+p{
+    font-size: calc(2.5px + 0.8vw);
 }
 
 #background{
@@ -102,6 +110,7 @@ p, span{
     border-radius: 5vh;
     margin: 1vh;
     padding: 7vh 6vw !important;
+    overflow: hidden;
 }
 
 .shadow {
@@ -226,8 +235,10 @@ li {
     margin-bottom: 5px;
 }
 
-.history-container > *{
+
+#history-container > *{
     margin-bottom: 7vh;
+    height: max(100%, fit-content);
 }
 
 /* red dot flag */
@@ -279,10 +290,6 @@ border: 3px solid var(--text-pink);
 }
 
 
-.blur{
-    filter: blur(6px)
-}
-
 
 .screen-inactive{
     margin: 0;
@@ -324,4 +331,31 @@ hr {
     background-color:#fff;
     height:1px;
     width:100%;
+  }
+
+
+  .Typewriter__wrapper, .Typewriter__cursor{
+    color: #F08C6F;
+    font-size: calc(6px + 1.5vw) !important;
+    font-weight: 800;
+    font-style: italic;
+  }
+
+
+  .terminal-code > *, .terminal-code > * > *{
+    font-size: calc(2.5px + 0.8vw) !important;
+  }
+
+  .custom-btn{
+    background-color: var(--text-pink);
+    width: fit-content;
+    padding: calc(2px + 0.6vw);
+    border-radius: 10px;
+    transition: 0.1s linear;
+  }
+  .custom-btn:hover, .custom-btn:focus{
+    opacity: 60%;
+  }
+  .custom-btn > * {
+    color: white !important;
   }
