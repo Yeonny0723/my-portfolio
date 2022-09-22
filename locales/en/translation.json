@@ -12,5 +12,25 @@
             "0": "Hi",
             "1": "is converted & visualized to binary code using utf8 encoding"
         }
+    },
+    "profile":{
+        "skip": "Click screen to skip",
+        "intro": {
+            "0": "Hi there 👋 This is Juyeon who...",
+            "1": "wants to leave a mark on the world and focus on the 'value' which I can bring to the world",
+            "2": "constantly learn and study to be a better me than yesterday",
+            "3": "is ready to work in a team to resolve a big world problem",
+            "4": "is a fast learner and can work at a very fast pace",
+            "5": "can be grateful for what I have and value every single relationship"
+        },
+        "terminal": "Press ← button below to find me out more ↓",
+        "experience": [],
+        "education": []
+    },
+    "portfolio":{
+        "balinne":{
+            "summary":"",
+            "takeaway":""
+        }
     }
 }
