@@ -9,35 +9,42 @@ import { BounceUp } from "../components/AnimatePage";
 const Profile = () => {
     // hide message
     const [showElement, setShowElement] = useState(true);
+    const skipProfile = () => {
+        setShowElement(false)
+    }
     useEffect(()=>{
         setTimeout(function(){
             setShowElement(false)
-            }, 0);
-    },[])
+            }, 1400000);
+    },[showElement])
 
     const typeConst = ['be a changemaker', 'solve a big world problem']
     const content = (
         <div className="window-container" style={{height:"100%", overflow:"scroll"}}>
             {showElement?
-            <div className="profileMessage fadeUp" style={{width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+            <div className="profileMessage fadeUp" onClick={skipProfile} style={{position: "relative", width:"100%", height:"100%", display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", cursor:"pointer"}}>
                 <h2 style={{margin:"0", marginBottom:"5vh"}}><em>This is Juyeon</em> 👩‍💻</h2>
                 <div style={{display:"flex"}}>
                     <h3 style={{margin:"0"}}><em>who wants to&nbsp;</em></h3>
                     <Typewriter
                         onInit={(typewriter)=>{
-                            typewriter.pauseFor(500)
+                            typewriter.pauseFor(800)
                             .typeString(`${typeConst[0]}`).start()
                             .pauseFor(100)
                             .deleteAll()
-                            .typeString(`${typeConst[1]}`).start();
+                            .typeString(`${typeConst[1]}`).start()
+                            .pauseFor(100)
+                            .deleteAll();
                         }}
                         options={{
                             autoStart: true,
-                            // loop: true,
+                            loop: true,
                         }}
                     />
                 </div>
-            </div> : null
+                <p style={{opacity:"25%", position:"absolute", bottom:"15%"}}><em>(Click screen to skip)</em></p>
+            </div> 
+            : null
             }
             {showElement?
             null:
