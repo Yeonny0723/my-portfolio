@@ -218,7 +218,7 @@ i:hover{
 }
 
 p{
-    line-height: 150%;
+    line-height: 160%;
 }
 
 /* timeline */
@@ -348,9 +348,11 @@ hr {
 
   .custom-btn{
     background-color: var(--text-pink);
+    font-weight: 600;
     width: fit-content;
-    padding: calc(2px + 0.6vw);
-    border-radius: 10px;
+    height: fit-content;
+    padding: calc(0px + 0.6vw);
+    border-radius: 15px;
     transition: 0.1s linear;
   }
   .custom-btn:hover, .custom-btn:focus{

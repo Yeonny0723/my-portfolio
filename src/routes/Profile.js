@@ -7,17 +7,6 @@ import { useEffect, useState } from "react"
 import { BounceUp } from "../components/AnimatePage";
 
 const Profile = () => {
-    // Slide 
-    const slideStyle = {
-        display:"flex", 
-        flexDirection:"column",
-        justifyContent: "center",
-        alignItems: "center",
-        height:"100%",
-        overflow:"scroll", 
-        scrollBehavior:"smooth"
-    }
-
     // hide message
     const [showElement, setShowElement] = useState(true);
     useEffect(()=>{
@@ -44,7 +33,7 @@ const Profile = () => {
                         }}
                         options={{
                             autoStart: true,
-                            loop: true,
+                            // loop: true,
                         }}
                     />
                 </div>
@@ -54,12 +43,10 @@ const Profile = () => {
             null:
                 <div style={{display:"flex", justifyContent:"space-between", alignItems:"center",
             width: "100%", height:"100%"}}>
-                    <div style={{...{slideStyle}, width:"45%", fontSize:"0.9rem",
-            overflow: "scroll"}}>
+                    <div style={{width:"45%", fontSize:"0.9rem"}}>
                         <SelfIntro/>
                     </div>
-                    <div style={{...{slideStyle},width:"50%", fontSize:"0.8rem",
-            overflow: "scroll"}}>
+                    <div style={{width:"50%", fontSize:"0.8rem"}}>
                     <p style={{display:"flex"}}>
                     Press &nbsp;
                     <em style={{color:"#F08C6F"}}>

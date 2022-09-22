@@ -25,9 +25,6 @@ const History = () => {
             [name]: !pins[name],
         }));
     }
-    useEffect(()=>{
-        console.log("pins", pins)
-    },[pins]);
 
     return (
         <div id="history-container" style={{
