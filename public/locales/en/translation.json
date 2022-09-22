@@ -1,16 +1,27 @@
 {
-    "welcome":{
+    "home":{
         "title": "Warm welcome!",
-        "click": "Click to continue"
-    }, 
-    "welcome2":{
-        "title": {
-            "0": "Select your",
-            "1": "language!"
+        "click": "Click to continue!",
+        "lang": ["Select your", "language"],
+        "comment": ["Hi", "is converted & visualized to binary code using utf8 encoding"]
+    },
+    "profile":{
+        "skip": "Click screen to skip",
+        "intro": {
+            "0": "Hi there 👋 This is Juyeon who...",
+            "1": "wants to leave a mark on the world and focus on the 'value' which I can bring to the world",
+            "2": "constantly learn and study to be a better me than yesterday keeping 1 day 1 commit",
+            "3": "is ready to work in a team to resolve a big world problem through programming club, group projects, and mentoring activities",
+            "4": "10-12h commitment per day + for 4 months + with only 3 members == built data pipelines ~ modeling a-z. Fast-learner can achieve max productivity."
         },
-        "comment": {
-            "0": "Hi",
-            "1": "is converted & visualized to binary code using utf8 encoding"
+        "terminal": "← press the button below to find me out more ↓",
+        "experience": [],
+        "education": []
+    },
+    "portfolio":{
+        "balinne":{
+            "summary":"",
+            "takeaway":""
         }
     }
 }

@@ -215,13 +215,38 @@ const History = () => {
                                 <p>
                                     <p>GPA: 3.8/4.0</p> <br></br>
                                     <p>Explore my <a style={{color:"#F7C1B1"}} target="_blank" href="https://yeonny-kim.notion.site/RMIT-Uni-Information-Systems-924373c5ff5446e08e9558e566e4f527"><em>COURSEWORK</em></a></p>
+                                    <br></br>
+                                    <p style={{fontSize:"0.7rem"}}>
+                                    "Project management": IT/IS strategy & governance, Sprint, Use case & Class & Acitivty & State diagram, ERD, <br></br>
+                                    "Programming": Python, SQL, PHP, JavaScript, <br></br>
+                                    "IT operations": Network, Linux, OS Cloud, <br></br>
+                                    "Data science": ML modeling, Visualization
+                                    </p>
                                 </p>
                                 }/>
                             <br></br>
                             <Timeline date={"May 2021 - Aug 2021"} title={"Likelion AI school"} content={
                                 <p>Explore my 
                                     <br></br>
-                                    <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Titanic-data-modelling/blob/main/0705_semi2_Titanic_modeling_v1.ipynb"><em>COURSEWORK</em></a> | <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Company-recommendation-system"><em>COURSEWORK</em></a>
+                                    <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Titanic-data-modelling/blob/main/0705_semi2_Titanic_modeling_v1.ipynb"><em>COURSEWORK</em></a> | <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Company-recommendation-system"><em>COURSEWORK</em></a> <br></br>
+                                    <p style={{fontSize:"0.7rem"}}>
+                                    "What I learned" : "Statistics, EDA,  Data collection & Visualization, Web scrapping, Text similarity analysis, Data modeling, SQL, ML, DL" <br></br>
+                                    "Libraries": "Matplotlib, Seaborn, Scikit-learn, tensorflow"
+                                    </p>
+                                </p>
+                            }/>
+                            <br></br>
+                            <Timeline date={"2020 - now"} title={"Self-taught online courses"} content={
+                                <p style={{fontSize:"0.7rem"}}>
+                                    "CS50 EDX": CS fundamentals,<br></br>
+                                    "YouTube cloning, CSS Masterclass": NodeJS, ES6, Express, Babel, Pug, AJAX, Webpack, SCSS, MongoDB, Mongoose, HTML5, CSS3,<br></br>
+                                    "Webscrapper with Pyhton class": Python3, BeautifulSoup4, Flask,<br></br>
+                                    "Movie service with ReactJS class": React, Axios, React Router, <br></br>
+                                    "Go lang beginner class": Go lang,<br></br>
+                                    "Painting app, JS To Do List class": Vanilla JS, <br></br>
+                                    "NFT blockchain market app class": Solidity, Smart contract, BApp a-z,<br></br>
+                                    "Advanced Django web application": Django, MVT pattern , AWS RDS Postgres, S3<br></br>
+                                    "Udemy Algorithm a-z, Fastcampus": Python3, CS fundamentals, Data structure, algorithms<br></br>
                                 </p>
                             }/>
                         </ul>

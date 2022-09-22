@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Language from "./Language"
 import {useTranslation} from 'react-i18next';
 import { motion } from "framer-motion";
-import {Bounce, UpSlide} from "../components/AnimatePage"
+import {Bounce} from "../components/AnimatePage"
 import {NavLink} from 'react-router-dom';
 
 const Welcome = () => {
@@ -48,12 +48,13 @@ const Welcome = () => {
                 restDelta: 0.001
               }
             }}
-        ><em>{i18n.t("welcome.title")} 👋</em></motion.h1>
+        ><em>{i18n.t("home.title")} 👋</em></motion.h1>
         <Bounce>
         <a href="#home-lang" style={{color:"black"}}>
         <h5  style={{cursor:"pointer", margin:"0"}}>
-          {i18n.t("welcome.click")}
+          {i18n.t("home.click")}
         </h5>
+        <br></br>
         <i style={{width:"100%", textAlign:"center"}} className="fa-solid fa-angles-down"></i>
         </a>
         </Bounce>
@@ -82,7 +83,7 @@ const Welcome = () => {
               }
             }}
 
-        ><em>{i18n.t("welcome2.title.0")} <em className='highlight-pink'> {i18n.t("welcome2.title.1")}</em></em></motion.h2>
+        ><em>{i18n.t("home.lang.0")} <em className='highlight-pink'> {i18n.t("home.lang.1")}</em></em></motion.h2>
         <div onClick={()=>{
           setClicked((clicked)=>!clicked);
           setFirstClicked(true);
@@ -107,7 +108,7 @@ const Welcome = () => {
             src={require(`../img/${i18n.language}.png`)} 
             style={{width: "25%", minWidth:"50px", opacity:"80%"}}
         />
-        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("welcome2.comment.0")}"</span> {i18n.t("welcome2.comment.1")})</p>
+        <p>(<span className='highlight-pink' style={{textDecoration:"none"}}>"{i18n.t("home.comment.0")}"</span> {i18n.t("home.comment.1")})</p>
         {firstClicked?
           <Bounce>
             <NavLink to="/profile"><i style={{width:"100%", textAlign:"center", color:"grey"}} className="fa-solid fa-angles-down"></i></NavLink>

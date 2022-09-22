@@ -43,20 +43,23 @@ const Base = ({content}) => {
         <a target="_blank" href="mailto:kkjuyeon@gmail.com"><i className="fa-solid fa-envelope fa-2xl" /></a>
       </div>
 
-      {window.location.pathname === '/' ? 
-      <div className="btn shadow" style={{borderRadius: '5vh'}}>
-      <NavLink to="/portfolio"><i className="fa-solid fa-caret-left fa-2xl" /></NavLink>
-      <NavLink to="/profile"><i className="fa-solid fa-caret-right fa-2xl" /></NavLink> 
-    </div> : <>
-      {window.location.pathname === '/profile' ?
+      {/* portfolio */}
+      {window.location.pathname.includes("portfolio") ? 
+          <div className="btn shadow" style={{borderRadius: '5vh'}}>
+          <NavLink to="/profile"><i className="fa-solid fa-caret-left fa-2xl" /></NavLink>
+          <NavLink to="/"><i className="fa-solid fa-caret-right fa-2xl" /></NavLink> 
+        </div>
+      : <>
+      {/* profile */}
+      {window.location.pathname.includes("profile") ? 
       <div className="btn shadow" style={{borderRadius: '5vh'}}>
       <NavLink to="/"><i className="fa-solid fa-caret-left fa-2xl" /></NavLink>
       <NavLink to="/portfolio"><i className="fa-solid fa-caret-right fa-2xl" /></NavLink> 
     </div> :
       <div className="btn shadow" style={{borderRadius: '5vh'}}>
-      <NavLink to="/profile"><i className="fa-solid fa-caret-left fa-2xl" /></NavLink>
-      <NavLink to="/"><i className="fa-solid fa-caret-right fa-2xl" /></NavLink> 
-    </div>
+      <NavLink to="/portfolio"><i className="fa-solid fa-caret-left fa-2xl" /></NavLink>
+      <NavLink to="/profile"><i className="fa-solid fa-caret-right fa-2xl" /></NavLink> 
+    </div> 
       }
       </>
     }

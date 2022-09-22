@@ -5,6 +5,7 @@ import SelfIntro from "../components/SelfIntro"
 import Typewriter from 'typewriter-effect'
 import { useEffect, useState } from "react"
 import { BounceUp } from "../components/AnimatePage";
+import {useTranslation} from 'react-i18next';
 
 const Profile = () => {
     // hide message
@@ -15,9 +16,11 @@ const Profile = () => {
     useEffect(()=>{
         setTimeout(function(){
             setShowElement(false)
-            }, 1400000);
-    },[showElement])
+            }, 14000);
+    },[showElement]);
 
+    const { t, i18n } = useTranslation();
+    
     const typeConst = ['be a changemaker', 'solve a big world problem']
     const content = (
         <div className="window-container" style={{height:"100%", overflow:"scroll"}}>
@@ -42,7 +45,7 @@ const Profile = () => {
                         }}
                     />
                 </div>
-                <p style={{opacity:"25%", position:"absolute", bottom:"15%"}}><em>(Click screen to skip)</em></p>
+                <p style={{opacity:"25%", position:"absolute", bottom:"15%"}}><em>({i18n.t("profile.skip")})</em></p>
             </div> 
             : null
             }
@@ -55,13 +58,12 @@ const Profile = () => {
                     </div>
                     <div style={{width:"50%", fontSize:"0.8rem"}}>
                     <p style={{display:"flex"}}>
-                    Press &nbsp;
                     <em style={{color:"#F08C6F"}}>
                         <BounceUp>
                         "Click to run"&nbsp;
                         </BounceUp>
                     </em> 
-                    &nbsp;button below to find me out more ↓
+                    &nbsp; {i18n.t("profile.terminal")}
                     </p>
                         <Terminal/> 
                     </div>

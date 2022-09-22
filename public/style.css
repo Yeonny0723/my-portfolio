@@ -46,7 +46,7 @@ body {
 
 /* responsive font size */
 span{
-    font-size: calc(5px + 1vw);
+    font-size: calc(3.5px + 0.9vw);
 }
 i{
     font-size: calc(5px + 1.5vw);
