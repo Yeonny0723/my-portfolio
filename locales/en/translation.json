@@ -12,16 +12,14 @@
             "1": "wants to leave a mark on the world and focus on the 'value' which I can bring to the world",
             "2": "constantly learn and study to be a better me than yesterday keeping 1 day 1 commit",
             "3": "is ready to work in a team to resolve a big world problem through programming club, group projects, and mentoring activities",
-            "4": "10-12h commitment per day + for 4 months + with only 3 members == built data pipelines ~ modeling a-z. Fast-learner can achieve max productivity."
+            "4": "is a fast-learner can achieve max productivity."
         },
         "terminal": "← press the button below to find me out more ↓",
         "experience": [],
         "education": []
     },
     "portfolio":{
-        "balinne":{
-            "summary":"",
-            "takeaway":""
-        }
+        "myStory": "I believe that being able to speak a language means more than a means of communication but wider connections and opportunities. I studied economics and finance until 20. Apart from my school studies, with my obsession with language learning, I was able to acquire ITT interpretation & translation certificates for both Vietnamese & English and imagined myself to be a cool interpreter!\n The reason I chose to change my career path as a developer was very simple. About 3 years ago, in an interview with a Silicon Valley engineer on a YouTube channel called EO, I was captivated by programming looking at how powerful it is to be able to deliver values to the world! I transferred and switched my major without hesitation to Information systems and studied computer science basics/programming along with a strategic business process management approach using IT technology and was able to graduate with high distinction. \n I enjoy the whole process of problem-solving and I am particularly interested in back-end development/full-stack development. And I have this motto, to be better me than yesterday. With fire in my belly, I've tried my best to achieve what I believe is right by all means and it turned out successful after all. ",
+        "pvSkill": "I had experience as a data engineer intern at MyCelebs, which enhances the search experience of users with differentiated key talk recommendation technology. \n At the time of the initial project, people had sorted the same cosmetics manually from different shopping malls as they all have different formats of title text & images by its seller. \n I and our team had this goal to create a model to sort the items by their title and image model to remove the manual sorting work.  \n  I was in charge of collecting more than 10 million data and creating NLP models I think it's nearly impossible for a team of just three people to get millions of pieces of data from collection to modeling in less than three months with not sufficient resources.\n In the process of collecting data, data loss could not be avoided due to unexpected network and server issues. By categorizing all the possible issues with highly reusable code, I practiced the concept of polymorphism, OOP, and encapsulation principles. \n Moreover, I improved the model accuracy by about 5% through preprocessing by patterning and pre-processed stopwords in the titles that are described out of pattern depending on the content creator and created an NFT model using Mecab and TF-idf. \n "
     }
 }
