@@ -16,7 +16,7 @@ const Profile = () => {
     useEffect(()=>{
         setTimeout(function(){
             setShowElement(false)
-            }, 14000);
+            }, 10000);
     },[showElement]);
 
     const { t, i18n } = useTranslation();
@@ -51,7 +51,7 @@ const Profile = () => {
             }
             {showElement?
             null:
-                <div style={{display:"flex", justifyContent:"space-between", alignItems:"center",
+                <div className="fadeUp" style={{display:"flex", justifyContent:"space-between", alignItems:"center",
             width: "100%", height:"100%"}}>
                     <div style={{width:"45%", fontSize:"0.9rem"}}>
                         <SelfIntro/>

@@ -1,5 +1,6 @@
 import Timeline from "../components/Timeline"
 import {useEffect, useState} from "react";
+import {useTranslation} from 'react-i18next';
 
 const History = () => {
     const tagStyle = {
@@ -10,9 +11,6 @@ const History = () => {
 
     const [pins, setPins] = useState({
         "stories": false,
-        "main": false,
-        "memorable": false,
-        "strength": false,
         "experience": false,
         "skills": false,
         "education": false,
@@ -26,6 +24,8 @@ const History = () => {
         }));
     }
 
+    const { t, i18n } = useTranslation();
+
     return (
         <div id="history-container" style={{
             minHeight:"100%",
@@ -34,65 +34,24 @@ const History = () => {
             flexDirection:"column",
             justifyContent:"center",
             }}>
-                {/* My stories */}
-                {/* <div>
+                {/* My stories: about me */}
+                <div>
                     {pins["stories"]?
                     <a onClick={()=>clickPin("stories")}>
-                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 My story</h3>
+                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Who am I</h3>
                         <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
-                            <p>...</p>
+                            <span>[My stories]</span> <br></br>
+                            <p>{i18n.t("portfolio.myStory")}</p> <br></br>
+                            <br></br>
+                            <span>[Problem solving]</span> <br></br>
+                            <p>{i18n.t("portfolio.pvSkill")}</p>
                         </div>
                     </a>:
                     <a onClick={()=>clickPin("stories")} style={{opacity: "40%"}}>
-                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 My Story</h3>
+                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 Who am I</h3>
                     </a>
                     }
-                </div> */}
-
-                {/* Main field */}
-                {/* <div>
-                    {pins["main"]?
-                    <a onClick={()=>clickPin("main")}>
-                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Main field</h3>
-                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
-                            <p>...</p>
-                        </div>
-                    </a>:
-                    <a onClick={()=>clickPin("main")} style={{opacity: "40%"}}>
-                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 Main field</h3>
-                    </a>
-                    }
-                </div> */}
-
-                {/* Memorable project */}
-                {/* <div>
-                    {pins["memorable"]?
-                    <a onClick={()=>clickPin("memorable")}>
-                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Memorable project</h3>
-                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
-                            <p>...</p>
-                        </div>
-                    </a>:
-                    <a onClick={()=>clickPin("memorable")} style={{opacity: "40%"}}>
-                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 Memorable project</h3>
-                    </a>
-                    }
-                </div> */}
-
-                {/* My strength */}
-                {/* <div>
-                    {pins["strength"]?
-                    <a onClick={()=>clickPin("strength")}>
-                        <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 My strength</h3>
-                        <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
-                            <p>...</p>
-                        </div>
-                    </a>:
-                    <a onClick={()=>clickPin("strength")} style={{opacity: "40%"}}>
-                        <h3 style={{marginBottom:"0", marginTop:"10px"}} >📌 My strength</h3>
-                    </a>
-                    }
-                </div> */}
+                </div>
 
                 {/* Experience */}
                 <div>
@@ -101,9 +60,15 @@ const History = () => {
                         <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Experience</h3>
                         <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
                             <ul style={{listStyle:"none", padding:"0"}}>
+                            <Timeline date={"Nov 7 2022 ~ Now"} title={"Modern React & Redux coach at Alice"} content={<ul>
+                                <li><p>Etc: Explain theory and give basic problem solving lesson to 2-30 students about JSX, React, React Hooks, Jest, Docker </p></li>
+                            </ul>}/>
+                            <br></br>
                             <Timeline date={"Dec 2021 - April 2022 [5mos]"} title={"Balinne Full-stack freelancer"} content={<ul>
-                                <li><p>Developed the responsive e-commerce website from scratch reflecting the ordering and payment use cases.</p></li>
-                                <li><p>Conducted an iterative approach to elicit clients’ functional and non-functional requirements, design an ERD database, and write a functional specification.</p></li>
+                                <li><p>FE: Responsive website view, Dynamic menu bar, Provide multi-lang, Flash message, </p></li>
+                                <li><p>BE: Sending direct email on web, Social login authentication, Auto delivery address updates on purchase, Search address using Post Address API</p></li>
+                                <li><p>DB: ERD modeling for ordering & payment system</p></li>
+                                <li><p>Etc: Web hosting with AWS elastic beans, Cloud S3 storage, Functional & non-functional requirements report, Wrote terms of privacy policy </p></li>
                             </ul>}/>
                             <br></br>
                             <Timeline date={"Oct 2021 - Dec 2021 [2mos]"} title={"UN Research Volunteer"} content={<ul>
@@ -127,6 +92,7 @@ const History = () => {
                 </div>
 
                 {/* Skills */}
+                {/* https://github.com/Ileriayo/markdown-badges */}
                 <div>
                     {pins['skills']?
                     <a onClick={()=>clickPin("skills")}>
@@ -142,7 +108,7 @@ const History = () => {
                     <hr></hr>d */}
                     <span style={tagStyle}>#Backend</span><br></br>
                     <img style={{height:"max(15px,4vh)"}} src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white"/>
-                    <img style={{height:"max(15px,4vh)"}} src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"/>
+                    <img style={{height:"max(15px,4vh)"}} src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"/>
                     <br></br>
                     <hr></hr>
                     {/* Front-end */}
@@ -159,6 +125,7 @@ const History = () => {
                     <br></br> */}
                     {/* Database & Hosting */}
                     <span style={tagStyle}>#DB & Hosting</span><br></br>
+                    <img style={{height:"max(15px,4vh)"}} src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"/>
                     <img style={{height:"max(15px,4vh)"}} src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
                     <img style={{height:"max(15px,4vh)"}} src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"/>
                     <br></br>
@@ -211,7 +178,7 @@ const History = () => {
                         <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Education</h3>
                         <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
                             <ul style={{listStyle:"none", padding:"0"}}>
-                            <Timeline date={"July 2018 - June 2022"} title={"Majored Information systems at RMIT"} content={
+                            <Timeline date={"July 2018 - June 2022"} title={"Majored Information systems at RMIT University"} content={
                                 <p>
                                     <p>GPA: 3.8/4.0</p> <br></br>
                                     <p>Explore my <a style={{color:"#F7C1B1"}} target="_blank" href="https://yeonny-kim.notion.site/RMIT-Uni-Information-Systems-924373c5ff5446e08e9558e566e4f527"><em>COURSEWORK</em></a></p>
@@ -228,7 +195,7 @@ const History = () => {
                             <Timeline date={"May 2021 - Aug 2021"} title={"Likelion AI school"} content={
                                 <p>Explore my 
                                     <br></br>
-                                    <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Titanic-data-modelling/blob/main/0705_semi2_Titanic_modeling_v1.ipynb"><em>COURSEWORK</em></a> | <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Company-recommendation-system"><em>COURSEWORK</em></a> <br></br>
+                                    <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Titanic-data-modelling/blob/main/0705_semi2_Titanic_modeling_v1.ipynb"><em>COURSEWORK 1</em></a> | <a style={{color:"#F7C1B1"}} target="_blank" href="https://github.com/Yeonny0723/Company-recommendation-system"><em>COURSEWORK 2</em></a> <br></br>
                                     <p style={{fontSize:"0.7rem"}}>
                                     "What I learned" : "Statistics, EDA,  Data collection & Visualization, Web scrapping, Text similarity analysis, Data modeling, SQL, ML, DL" <br></br>
                                     "Libraries": "Matplotlib, Seaborn, Scikit-learn, tensorflow"

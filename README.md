@@ -6,9 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+## For development mode
+npm dev:start
 
-To modify the code in a local directory, be sure to...
-- delete the 'homepage' key on package.json
-- rename the App.js BrowserRouter's basename attribute to "/my-portfolio"
-- delete the build folder. 
+## For production mode
+

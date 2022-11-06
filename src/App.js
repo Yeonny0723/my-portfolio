@@ -4,8 +4,9 @@ import Profile from "./routes/Profile";
 import Portfolio from "./routes/Portfolio";
 
 function App() {
+  const basename = process.env.NODE_ENV === "development" ? "/my-portfolio" : process.env.PUBLIC_URL;
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
