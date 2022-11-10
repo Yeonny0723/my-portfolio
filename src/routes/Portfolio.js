@@ -4,6 +4,10 @@ import Card from "../components/Card";
 import proj_0_thumbnail from "../img/proj_0_thumbnail.jpeg"
 import proj_0_preview from "../img/proj_0_preview.jpeg"
 
+import film_memories from "../img/film-emories.jpeg"
+import soundTrip from "../img/soundTrip.png"
+import myPortfolio from "../img/myPortfolio.png"
+
 import proj_1_preview from "../img/proj_1_preview.jpeg"
 
 import proj_2_preview from "../img/proj_2_preview.jpeg"
@@ -17,9 +21,38 @@ import proj_5_preview from "../img/proj_5_thumbnail.jpeg"
 
 
 const props_0 = [
+    // Film-emories
+    {
+        width: "32%",
+        title: "Online Photobooth: Film-emories",
+        thumbnail: film_memories,
+        link : "https://github.com/Yeonny0723/film-emories",
+        preview: film_memories, 
+        timeline: "2022.Oct.14 ~ 2022.Oct.07",
+        desc: "This is an online photo booth service where you can capture your memorable moment. You can take a photo using a webcam and it will generate you a downloadable links for photo card and video. You will have an access to your own photobook where you can keep your photos forever and share it with your friends.",
+        skills: "Pug, Webpack, Babel, SCSS, WebAssembly, FFmpeg, Express, Ajax, MongoDB",
+        takeaway: 
+        <p>I used the modern JS ES6 and compiled them using webpack and babel. I accept this MVC divide and conquer pattern to avoid duplicates and for easy maintenance and reusability. I used WebAssembly to allow the big program like ffmpeg to be able to run on the browser. The recorded video is later saved to the browser memory which reduces the burden on the server. I am now comfortable customizing middlewares / making use of sessions and cookies / creating API.</p>
+        },
+    // My portfolio
+    {
+        width: "32%",
+        title: "My Portfolio website",
+        thumbnail: myPortfolio,
+        link : "https://github.com/Yeonny0723/my-portfolio",
+        preview: myPortfolio, 
+        timeline: "2022.Aug.05 ~ 2022.Aug.31",
+        desc: "Starting my developer study in 2020, I wanted to prove my fast-learning curve + potential + creativity through this portfolio. As a non-cs student, I also wanted to appeal my algorithms and cs fundamentals and provide a compact overview of all the projects I've done so far.",
+        skills: "React, i8next(multi-language), framer-motion, jest, react-dom, react-router-dom",
+        takeaway: 
+        <ul>
+            <li>For the home page, I tried to make a page interactive and visually appealing with various animations and pictures. And I encoded all the welcome messages of each language I can speak into binary code and added a bit of fun point by visualizing them.</li>
+            <li>Next for the profile page, I added the mac terminal view and describe myself using Python Object-oriented programming. On top of that, I would like to mention my favorite algorithm is the Greedy algorithm cuz I love the fact that it chooses the best option available at the moment, which is so close to my life motto!</li>
+        </ul>
+        },
     // Balinne web shopping mall
     {
-        width: "48%",
+        width: "32%",
         title: "Balinne Web shopping mall",
         thumbnail: proj_0_thumbnail,
         link : "https://www.youtube.com/watch?v=DsCSNfDMI24&t=6s",
@@ -37,6 +70,45 @@ const props_0 = [
             <li>Website deployment and database storage on AWS</li>
         </ol>
         },
+        
+    ]
+    
+    // https://source.unsplash.com/random/?program
+    
+    const props_1 = [
+        // Sound-trip
+        {
+            width: "24%",
+            title: "SoundTrip",
+            thumbnail: soundTrip,
+            link : "https://github.com/Yeonny0723/sound-trip",
+            preview: soundTrip, 
+            timeline: "2022.Sep.27 ~ 2022.Sep.03",
+            desc: "Ambient sound recommender",
+            skills: "Front: React, React-howler Server: Flask, Pandas, Heroku Web-Scrapping: Selenium, Beautifulsoup, Chrome webdriver manager",
+            takeaway: 
+            <ol>
+                <li>Scrap and tag 189 ambient sounds</li>
+                <li>Let users to choose the environment that the most maximize their focus (choose sound preference)</li>
+                <li>Show a list of audio sounds related to the chosen tags</li>
+            </ol>
+            },
+        // Oatmeal project
+        {
+            width: "24%",
+            title: "Oatmeal: AI diet plan ",
+            thumbnail: proj_5_thumbnail,
+            link : "https://www.youtube.com/watch?v=djnRc7b8Lk4&t=161s",
+            preview: proj_5_preview, 
+            timeline: "2021.07 ~ 2021.11",
+            desc: "AI diet plan & supplement reccomendation service [Food safety korea contest]",
+            skills: "Scikit-learn · ALS algorithm · Tensorflow · matplotlib · cs2 · User CF · Content-based CF · Image classification · Django",
+            takeaway: <ol>
+            <li>Studied effective data storage structure</li>
+            <li>Implemented various ML algorithm (CF, tf-idf, ALS algorithm)</li>
+            <li>Used scrum framework using Trello</li>
+        </ol>
+    },
     // Hotel reservation
     {
         width: "24%",
@@ -73,56 +145,6 @@ const props_0 = [
             <li>KNN & Random forest modeling</li>
             <li>Feature selection</li>
             <li>Parameter tuning</li>
-        </ol>
-    },
-
-]
-
-// https://source.unsplash.com/random/?program
-
-const props_1 = [
-    // Fruity pang pang
-    {
-        width: "24%",
-        title: "Fruity pang pang",
-        thumbnail: "",
-        link : "https://fruitypangpang.netlify.app/",
-        preview: proj_3_preview, 
-        timeline: "2021.03 ~ 2021.03",
-        desc: "Following the korean trend labeling celebrities look as a fruit, this is an AI based test to find out your face reminds of which fruit.",
-        skills: "Flask · HTML5 · Teachable macine · Web scrapping",
-        takeaway: <ol>
-            <li>Scrap thousands of kpop images on google</li>
-            <li>Improve accuracy by (1) adjusting brightness & saturation, (2) using face extraction</li>
-            <li>Image classification model was trained using teachable machine</li>
-        </ol>
-    },
-    // Social distancing
-    {
-        width: "24%",
-        title: "Korean Covid19 distancing rules",
-        thumbnail: "https://images.unsplash.com/photo-1584652812805-2192cf80731d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y292aWR8fHx8fHwxNjYxNzc4NDc5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source",
-        link : "https://covid-business-restriction-kr.herokuapp.com/",
-        preview: proj_4_thumbnail, 
-        timeline: "2021.02 ~ 2021.2",
-        desc: "A service showing according sanitary rules by social distancing level during pandemic",
-        skills: "Flask · HTML5",
-        takeaway: "...",
-    },
-    // Oatmeal project
-    {
-        width: "48%",
-        title: "Oatmeal: AI diet plan ",
-        thumbnail: proj_5_thumbnail,
-        link : "https://www.youtube.com/watch?v=djnRc7b8Lk4&t=161s",
-        preview: proj_5_preview, 
-        timeline: "2021.07 ~ 2021.11",
-        desc: "AI diet plan & supplement reccomendation service [Food safety korea contest]",
-        skills: "Scikit-learn · ALS algorithm · Tensorflow · matplotlib · cs2 · User CF · Content-based CF · Image classification · Django",
-        takeaway: <ol>
-            <li>Studied effective data storage structure</li>
-            <li>Implemented various ML algorithm (CF, tf-idf, ALS algorithm)</li>
-            <li>Used scrum framework using Trello</li>
         </ol>
     },
 ]

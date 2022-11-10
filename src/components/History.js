@@ -40,11 +40,11 @@ const History = () => {
                     <a onClick={()=>clickPin("stories")}>
                         <h3 style={{marginBottom:"0", margin:"10px 0px"}} >📍 Who am I</h3>
                         <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
-                            <span>[My stories]</span> <br></br>
-                            <p>{i18n.t("portfolio.myStory")}</p> <br></br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;[My stories]</span> <br></br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;{i18n.t("portfolio.myStory")}</p> <br></br>
                             <br></br>
-                            <span>[Problem solving]</span> <br></br>
-                            <p>{i18n.t("portfolio.pvSkill")}</p>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;[Problem solving]</span> <br></br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;{i18n.t("portfolio.pvSkill")}</p>
                         </div>
                     </a>:
                     <a onClick={()=>clickPin("stories")} style={{opacity: "40%"}}>
@@ -61,7 +61,7 @@ const History = () => {
                         <div className="fadeUp" style={{width: "100%", height:"fit-content", padding: "2vh", backgroundColor:"rgba(0,0,0,0.02)", borderRadius:"10px"}}>
                             <ul style={{listStyle:"none", padding:"0"}}>
                             <Timeline date={"Nov 7 2022 ~ Now"} title={"Modern React & Redux coach at Alice"} content={<ul>
-                                <li><p>Etc: Explain theory and give basic problem solving lesson to 2-30 students about JSX, React, React Hooks, Jest, Docker </p></li>
+                                <li><p>Etc: Tutoring 60 students about JSX, React, React Hooks, Jest, Docker theory and problem solving </p></li>
                             </ul>}/>
                             <br></br>
                             <Timeline date={"Dec 2021 - April 2022 [5mos]"} title={"Balinne Full-stack freelancer"} content={<ul>

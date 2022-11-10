@@ -70,7 +70,7 @@ const Card = (props) => {
                         <div className="underline"></div>
                         {/* Project summary */}
                         <div>
-                            <a href={props.props.link} target="_blank" style={{color:"#F08C6F"}}><span><i className="fa-solid fa-code fa-sm"></i> &nbsp;Demo</span></a>
+                            <a href={props.props.link} target="_blank" style={{color:"#F08C6F"}}><span><i className="fa-solid fa-code fa-sm"></i> &nbsp;Github || Demo</span></a>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <span><i className="fa-solid fa-calendar-days fa-lg" style={{color:"#F08C6F", marginBottom:"5vh"}}></i> &nbsp;{props.props.timeline}</span>
                             <h5><em># Summary</em></h5>
