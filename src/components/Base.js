@@ -41,6 +41,9 @@ const Base = ({content}) => {
         <a target="_blank" href="https://github.com/Yeonny0723"><i className="fa-brands fa-github fa-2xl" /></a>
         <a target="_blank" href="https://www.linkedin.com/in/juyeon-kim-6a227a207/"><i className="fab fa-linkedin-in fa-2xl"></i></a>
         <a target="_blank" href="mailto:kkjuyeon@gmail.com"><i className="fa-solid fa-envelope fa-2xl" /></a>
+        <a data-use="spacing"></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCNKzJr3lPwz13sCzrDCuc1A"><i class="fa-brands fa-youtube fa-2xl"></i></a>
+        <a target="_blank" href="https://velog.io/@kkjuyeon"><i class="fa-brands fa-blogger fa-2xl"></i></a>
       </div>
 
       {window.location.pathname.includes("/portfolio") ? 

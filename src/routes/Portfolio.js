@@ -55,9 +55,9 @@ const props_0 = [
         width: "32%",
         title: "Balinne Web shopping mall",
         thumbnail: proj_0_thumbnail,
-        link : "https://www.youtube.com/watch?v=DsCSNfDMI24&t=6s",
+        link : "https://github.com/Yeonny0723/balinne_proj",
         preview: proj_0_preview, 
-        timeline: "2021.12 ~ 2022.04",
+        timeline: "2021.Dec ~ 2022.April",
         desc: "To create an E-commerce website from scratch",
         skills: "Django · MySQL · JavaScript · AWS Elastic Beanstalk ",
         takeaway: 
@@ -100,7 +100,7 @@ const props_0 = [
             thumbnail: proj_5_thumbnail,
             link : "https://www.youtube.com/watch?v=djnRc7b8Lk4&t=161s",
             preview: proj_5_preview, 
-            timeline: "2021.07 ~ 2021.11",
+            timeline: "2021.July ~ 2021.Dec",
             desc: "AI diet plan & supplement reccomendation service [Food safety korea contest]",
             skills: "Scikit-learn · ALS algorithm · Tensorflow · matplotlib · cs2 · User CF · Content-based CF · Image classification · Django",
             takeaway: <ol>
@@ -116,7 +116,7 @@ const props_0 = [
         thumbnail: "https://images.unsplash.com/photo-1608452964553-9b4d97b2752f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGF0YXNjaWVuY2V8fHx8fHwxNjYxNzc4MTkw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source",
         link : "https://github.com/Yeonny0723/rmit/tree/main/info_sys_solution_n_design/asgnt-02",
         preview: proj_1_preview, 
-        timeline: "2022.05 ~ 2022.05",
+        timeline: "2022.May ~ 2022.May",
         desc: "AHS hotel reservation system to streamline manual booking process",
         skills: "SQLite · Tkinter",
         takeaway: <ol>
@@ -135,7 +135,7 @@ const props_0 = [
         thumbnail: "",
         link :  "https://github.com/Yeonny0723/rmit/tree/main/info_sys_solution_n_design/asgnt_3",
         preview: proj_2_preview, 
-        timeline: "2022.06 ~ 2022.06",
+        timeline: "2022.June ~ 2022.June",
         desc: "This project aims to give an insight for Nationale Azur on how to conduct a more targeted marketing approach to their potential group of customers who are likely to repay their loan",
         skills: "Pandas · scikit-learn · matplotlib · seaborn",
         takeaway: <ol>
