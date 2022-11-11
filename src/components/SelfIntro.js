@@ -18,18 +18,18 @@ const SelfIntro = () => {
                 </div>
                 <div style={{display:"flex"}}>
                 <div className="custom-btn" style={{marginRight: "2vw"}}>
-                    {/* <a href="/files/new_resume.docx" download> */}
+                    <a href="https://graceful-canary-e9f.notion.site/Yeonny-who-focus-on-which-value-which-I-can-deliver-61b246d9cd5341d692ba3d6443330720">
                         <p>
                             <i className="fa-regular fa-file fa-lg"></i>&nbsp;Resume (eng)
                         </p>
-                    {/* </a> */}
+                    </a>
                 </div>
                 <div className="custom-btn">
-                    {/* <a href="/files/new_resume.docx" download> */}
+                    <a href="https://graceful-canary-e9f.notion.site/Yeonny-2a4e78ee019a4c0db4b56df3a6c8f1d1">
                         <p>
                             <i className="fa-regular fa-file fa-lg"></i>&nbsp;이력서 (kr)
                         </p>
-                    {/* </a> */}
+                    </a>
                 </div>
                 </div>
             </div>
