@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { SHADOW } from "../styles/Variables";
 import { ButtonHoverScale } from "../styles/AnimatePage";
+import { codeData } from "../../data/data";
 
 const Terminal = () => {
     return (
@@ -85,117 +86,5 @@ const TerminalCodesStyle = styled.div`
     flex-direction: column; 
 `
 
-const codeData = [
-    {
-        white: "abstract class Human {",
-        green: '',
-        size: 1
-    },
-    {
-        white:'constructor (',
-        green:'',
-        size: 3
-    },
-    {
-        white:'public',
-        green:'firstname: string, ',
-        size: 5
-    },
-    {
-        white:'public',
-        green:'lastname: string,',
-        size: 5
-    },
-    {
-        white:'public',
-        green:'nationality: string,',
-        size: 5
-    },
-    {
-        white:'protected',
-        green:'fav_algorithm: string,',
-        size: 5
-    },
-    {
-        white:'protected',
-        green:'age: number,',
-        size: 5
-    },
-    {
-        white:'private',
-        green:'hobby: string,',
-        size:5
-    },
-    {
-        white:'private',
-        green:'mbti: string,',
-        size: 5
-    },
-    {
-        white:'){}',
-        green:'',
-        size:3
-    },
-    {
-        white:'abstract',
-        green:'welcome(): void',
-        size: 3
-    },
-    {
-        white:'getFullName(){',
-        green:'',
-        size:3
-    },
-    {
-        white:'return',
-        green:'`${this.firstname} ${this.lastname}`',
-        size:5
-    },
-    {
-        white:'}',
-        green:'',
-        size:3
-    },
-    {
-        white:'}',
-        green:'',
-        size:1
-    },
-    {
-        white:'class Developer',
-        green:'extends Human{',
-        size:1
-    },
-    {
-        white:'welcome(){',
-        green:'',
-        size:3
-    },
-    {
-        white:'',
-        green:'console.log(`Welcome everybody!\n This is ${this.firstname} ${this.lastname}`)',
-        size:5
-    },
-    {
-        white:'}',
-        green:'',
-        size:3
-    },
-    {
-        white:'}',
-        green:'',
-        size:1
-    },
-    {
-        white:'const juyeon = new Developer',
-        green:'("Juyeon","Kim", "South Korea", "Greedy", 23, "Weekly tracking challenge, Cafe tour", "entj")',
-        size:1
-    },
-    {
-        white:'juyeon.welcome();',
-        green:'',
-        size:1
-    },
-]
 
 export default Terminal

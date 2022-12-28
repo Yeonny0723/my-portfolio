@@ -6,10 +6,10 @@ import balinneThumb from "../img/projects/balinne-thumb.jpeg"
 import oatmeal from "../img/projects/oatmeal.jpeg"
 import hotel from "../img/projects/hotel.jpeg"
 import potentialCustomer from "../img/projects/potentialCustomer.jpeg"
+import { VIVID_PINK } from "../components/styles/Variables"
 
 
-
-const projects = [
+export const projects = [
     // Film-emories
     {
         idx:0, // You can specify display order here
@@ -131,4 +131,211 @@ const projects = [
     },
 ]
 
-export default projects;
+export const skillsetData = {
+    "Programming language" : [
+        "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+        "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+    ],
+    "Backend": [
+        "https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white",
+        "https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+    ],
+    "Frontend": [
+        "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
+        "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+    ], 
+    "DB & Hosting": [
+        "https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white",
+        "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white",
+        "https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"
+    ]
+}
+
+export const experienceData = [
+    {
+        date: "Nov 7 2022 ~ Now",
+        title: "Modern React & Redux coach at Alice",
+        contents: ["Etc: Tutoring 60 students about JSX, React, React Hooks, Jest, Docker theory and problem solving"],
+    },
+    {
+        date: "Dec 2021 - April 2022 [5mos]",
+        title: "Balinne Full-stack freelancer",
+        contents: [
+            "FE: Responsive website view, Dynamic menu bar, Provide multi-lang, Flash message",
+            "BE: Sending direct email on web, Social login authentication, Auto delivery address updates on purchase, Search address using Post Address API",
+            "DB: ERD modeling for ordering & payment system",
+            "Etc: Web hosting with AWS elastic beans, Cloud S3 storage, Functional & non-functional requirements report, Wrote terms of privacy policy ",
+        ],
+    },
+    {
+        date: "Oct 2021 - Dec 2021 [2mos]",
+        title: "UN Research Volunteer",
+        contents: [
+            "Assessed South Korean & Australian digital e-governmence website",
+            "Verified the peer assessments and checked the discrepancies"
+        ],
+    },
+    {
+        date: "Aug 2021 - Nov 2021 [4mos]",
+        title: "Data Science Intern",
+        contents: [
+            "Scrapped and pre-processed 10 millions of text and image data with Python OOP reusable code in a very short amount of time",
+            "Increased model accuracy by 5% by identifying and removing stop word patterns",
+            "Created an optimal NLP model using TF-IDF and Mecab",
+            "Designed and conducted CRUD operations on the database using MySQL",
+        ],
+    },
+]
+
+export const educationData = [
+    {
+        date: "July 2018 - Dec 2022",
+        title: "Majored Information systems at RMIT University [Graduated]",
+        contents: [
+            "GPA: 3.8/4.0", 
+            <a style={{color:VIVID_PINK}} target="_blank" rel="noreferrer" href="https://graceful-canary-e9f.notion.site/Uni-Coursework-aab41c38280c4ba2b8adcb4f57640d8b">My Coursework</a>,
+            '"Project management": IT/IS strategy & governance, Sprint, Use case & Class & Acitivty & State diagram, ERD',
+            '"Programming": Python, SQL, PHP, JavaScript',
+            '"IT operations": Network, Linux, OS Cloud',
+            '"Data science": ML modeling, Visualization'
+        ],
+    },
+    {
+        date: "May 2021 - Aug 2021",
+        title: "Likelion AI school",
+        contents: [
+            <a style={{color:VIVID_PINK}} target="_blank" rel="noreferrer" href="https://github.com/Yeonny0723/Titanic-data-modelling/blob/main/0705_semi2_Titanic_modeling_v1.ipynb">Coursework part 1</a>,
+            <a style={{color:VIVID_PINK}} target="_blank" rel="noreferrer" href="https://github.com/Yeonny0723/Company-recommendation-system">Coursework part 2</a>,
+            '"What I learned" : "Statistics, EDA,  Data collection & Visualization, Web scrapping, Text similarity analysis, Data modeling, SQL, ML, DL"',
+            '"Libraries": "Matplotlib, Seaborn, Scikit-learn, tensorflow"',
+        ],
+    },
+    {
+        date: "2021 - now",
+        title: "Self-taught online courses",
+        contents: [
+            '"CS50 EDX": CS fundamentals,',
+            '"YouTube cloning, CSS Masterclass": NodeJS, ES6, Express, Babel, Pug, AJAX, Webpack, SCSS, MongoDB, Mongoose, HTML5, CSS3,',
+            '"Webscrapper with Pyhton class": Python3, BeautifulSoup4, Flask,',
+            '"Movie service with ReactJS class": React, Axios, React Router, ',
+            '"Go lang beginner class": Go lang,',
+            '"Painting app, JS To Do List class": Vanilla JS, ',
+            '"NFT blockchain market app class": Solidity, Smart contract, BApp a-z,',
+            '"Advanced Django web application": Django, MVT pattern , AWS RDS Postgres, S3',
+            '"Udemy Algorithm a-z, Fastcampus": Python3, CS fundamentals, Data structure, algorithms',
+        ],
+    },
+]
+
+export const codeData = [
+    {
+        white: "abstract class Human {",
+        green: '',
+        size: 1
+    },
+    {
+        white:'constructor (',
+        green:'',
+        size: 3
+    },
+    {
+        white:'public',
+        green:'firstname: string, ',
+        size: 5
+    },
+    {
+        white:'public',
+        green:'lastname: string,',
+        size: 5
+    },
+    {
+        white:'public',
+        green:'nationality: string,',
+        size: 5
+    },
+    {
+        white:'protected',
+        green:'fav_algorithm: string,',
+        size: 5
+    },
+    {
+        white:'protected',
+        green:'age: number,',
+        size: 5
+    },
+    {
+        white:'private',
+        green:'hobby: string,',
+        size:5
+    },
+    {
+        white:'private',
+        green:'mbti: string,',
+        size: 5
+    },
+    {
+        white:'){}',
+        green:'',
+        size:3
+    },
+    {
+        white:'abstract',
+        green:'welcome(): void',
+        size: 3
+    },
+    {
+        white:'getFullName(){',
+        green:'',
+        size:3
+    },
+    {
+        white:'return',
+        green:'`${this.firstname} ${this.lastname}`',
+        size:5
+    },
+    {
+        white:'}',
+        green:'',
+        size:3
+    },
+    {
+        white:'}',
+        green:'',
+        size:1
+    },
+    {
+        white:'class Developer',
+        green:'extends Human{',
+        size:1
+    },
+    {
+        white:'welcome(){',
+        green:'',
+        size:3
+    },
+    {
+        white:'',
+        green:'console.log(`Welcome everybody!\n This is ${this.firstname} ${this.lastname}`)',
+        size:5
+    },
+    {
+        white:'}',
+        green:'',
+        size:3
+    },
+    {
+        white:'}',
+        green:'',
+        size:1
+    },
+    {
+        white:'const juyeon = new Developer',
+        green:'("Juyeon","Kim", "South Korea", "Greedy", 23, "Weekly tracking challenge, Cafe tour", "entj")',
+        size:1
+    },
+    {
+        white:'juyeon.welcome();',
+        green:'',
+        size:1
+    },
+]

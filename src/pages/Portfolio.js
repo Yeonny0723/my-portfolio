@@ -1,7 +1,7 @@
 import Layout from "../components/layout/Layout"
 import Card from "../components/portfolio/Card";
 import styled from "styled-components";
-import projects from "../data/data"
+import {projects} from "../data/data"
 import { Underline } from "../components/styles/Sharing";
 
 const Portfolio = () => {
