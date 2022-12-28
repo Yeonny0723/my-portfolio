@@ -1,8 +1,30 @@
-import Base from "../components/Base"
-import Card from "../components/Card";
+import Layout from "../components/layout/Layout"
+import Card from "../components/portfolio/Card";
 import styled from "styled-components";
 import projects from "../data/data"
-import { Underline } from "../components/Sharing";
+import { Underline } from "../components/styles/Sharing";
+
+const Portfolio = () => {
+    const content = (
+        <PortfolioStyle>
+            <div>
+                <h3>Portfolio</h3>
+                <Underline/>
+            </div>
+            <CardRowStyle className="fadeUp">
+                {projects.sort((a, b) => a.idx - b.idx).map((props, idx)=>
+                    <Card props={props} key={idx}/>
+                )}
+            </CardRowStyle>
+        </PortfolioStyle>
+    )
+    return (
+        <div>
+            <Layout content={content}/> 
+        </div>
+    );
+}
+
 
 const CardRowStyle = styled.div`
     display:grid;
@@ -21,24 +43,4 @@ const PortfolioStyle = styled.div`
     scroll-behavior:smooth !important;
 `
 
-const Portfolio = () => {
-    const content = (
-        <PortfolioStyle>
-            <div>
-                <h3>Portfolio</h3>
-                <Underline/>
-            </div>
-            <CardRowStyle className="fadeUp">
-                {projects.map((props, idx)=>
-                    <Card props={props} key={idx}/>
-                )}
-            </CardRowStyle>
-        </PortfolioStyle>
-    )
-    return (
-        <div>
-            <Base content={content}/> 
-        </div>
-    );
-}
 export default Portfolio;

@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import {useState} from "react";
 import styled from "styled-components";
-import {TEXT_PINK} from "./Variables"
+import {DARK_SHADOW, SHADOW, TEXT_PINK} from "../styles/Variables"
 
 const Card = (props) => {
 
@@ -24,7 +24,7 @@ const Card = (props) => {
                 onClick={onClick}
                 whileHover={{
                     scale:0.98,
-                    opacity: 0.7,
+                    opacity: isOpen ? 1: 0.7,
                     duration: 0.3,
                 }}
                 >
@@ -40,11 +40,11 @@ const Card = (props) => {
                     >
                     <img 
                         src={props.props.preview}
-                        className="shadow"
+                        alt="project preview img"
                     />
                     <div>
                         <h4>Description</h4>
-                        <a href={props.props.link} target="_blank" style={{color:TEXT_PINK}}><p><i className="fa-solid fa-code fa-sm"></i> &nbsp;Github || Demo &nbsp;&nbsp;&nbsp;&nbsp;</p></a>
+                        <a href={props.props.link} target="_blank" style={{color:TEXT_PINK}} rel="noreferrer"><p><i className="fa-solid fa-code fa-sm"></i> &nbsp;Github || Demo &nbsp;&nbsp;&nbsp;&nbsp;</p></a>
                         <p><i className="fa-solid fa-calendar-days fa-lg" style={{color:TEXT_PINK}}></i> &nbsp;{props.props.timeline}</p>
                         <h5><em># Summary</em></h5>
                         <Pstyle>{props.props.desc}</Pstyle>
@@ -67,12 +67,9 @@ const Card = (props) => {
 }
 
 
-export default Card
-
-
 const CardStyled = styled(motion.div)`
     padding: 2.5vw 5vw;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    box-shadow: ${SHADOW};
     border-radius: 2rem;
     background-size: cover;
     z-index: 10;
@@ -85,7 +82,7 @@ const CardStyled = styled(motion.div)`
     position: ${(props)=>props.isopen? "fixed" : "static"};
     top: ${(props)=>props.isopen? "25%" : null};
     left: ${(props)=>props.isopen? "15%" : null};
-    text-shadow: ${(props)=>props.isopen? "1px 1px 2px rgba(0,0,0,0.1)" :"2px 2px 10px rgba(0,0,0,1)"};
+    text-shadow: ${(props)=>props.isopen? SHADOW : DARK_SHADOW};
 `
 
 const Pstyle = styled.p`
@@ -111,3 +108,5 @@ const CardOpen = styled(motion.div)`
         }
     }
 `
+
+export default Card

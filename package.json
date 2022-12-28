@@ -20,11 +20,12 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-use": "^17.4.0",
+    "styled-components": "^5.3.6",
     "typewriter-effect": "^2.19.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev:start" : "rimraf assets &&npm start", 
+    "dev:start": "rimraf assets &&npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,6 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://yeonny0723.github.io/my-portfolio"
+  }
 }

@@ -29,3 +29,8 @@ Next for the profile page, I added the mac terminal view and describe myself usi
 
 ### Used tools & libraries
 React, i8next(multi-language), framer-motion, jest, react-dom, react-router-dom
+
+### To do list (Future)
+Too many rendering happens while clicking binary image at Home page -> Should optimize
+Each image has different loading time at Portfolio page -> Bundle || SSR
+Apply Typescript

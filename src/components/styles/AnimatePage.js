@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { SHADOW } from "./Variables";
 
 export const LeftSlide = ({ children }) => {
   return (
@@ -101,7 +102,7 @@ export const Rotate360 = ({children}) => {
           fontWeight:"600",
           color:"white",
           height:"100%",
-          textShadow:"5px 5px 5px rgba(0,0,0,0.2)",
+          textShadow:SHADOW,
       }}
       initial={{ scale: 0 }}
       animate={{ rotate: 360, scale:1 }}
@@ -119,4 +120,91 @@ export const Rotate360 = ({children}) => {
         {children}
       </motion.div>
     )
+}
+
+export const TextTitleAnimate = ({children, duration}) => {
+  return (
+    <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 }
+        }}
+        transition={{
+            default: {
+                duration: duration,
+                ease: [0, 0.71, 0.2, 1.01]
+            },
+            scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+            }
+        }}
+    >
+    {children}
+  </motion.div>
+  )
+}
+
+export const FadeIn = ({children}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y:25 }}
+      exit={{ opacity: 1, y:0 }}
+      animate={{opacity: 1, y:0}}
+      transition={{
+        y: {
+          ease: "linear",
+          duration: 1,
+        },
+      }}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
+export const ButtonHoverScale = ({children}) => {
+  return (
+    <motion.div 
+    initial={{ opacity: 0.7, scale: 1 }}
+    whileHover={{ opacity: 1, scale: 1.2, x:-50 }}
+    style={{position:"sticky", bottom:"4vh", display:"flex",justifyContent:"end", margin:"0 2vw"}}>
+    <em style={{ 
+        width: "fit-content", 
+        backgroundColor: "#FFE2D9", 
+        padding:"1vh 1vw",
+        borderRadius:"0.8vw",
+        cursor:"pointer",
+        display:"flex",
+        justifyContent:"center",
+    }}>
+        {children}
+    </em>
+</motion.div>
+  )
+}
+
+
+export const ShakingImageAnimate = ({clicked, src}) => {
+  return (
+    <motion.img 
+        animate = {{
+        rotateY: clicked? [90,null] : [90,180],
+        rotateX: clicked? [10,-10,10,-10,5,-5,3,-3] : [-10,10,-10,10,-5,5,-3,3],
+        opacity: 1,
+        duration: 0.5,
+        transition:{
+            ease: "circOut",
+        }
+        }}
+        alt="byte img"
+        src={src}
+        style={{height:"23vh",minWidth:"50px", opacity:"80%"}}
+    />
+  )
 }

@@ -1,16 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./routes/Home";
-import Profile from "./routes/Profile";
-import Portfolio from "./routes/Portfolio";
+
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Portfolio from "./pages/Portfolio";
+
 
 function App() {
-  const basename = process.env.NODE_ENV === "development" ? "/my-portfolio" : process.env.PUBLIC_URL;
+  const basename = process.env.NODE_ENV === "development" ? "/" : process.env.PUBLIC_URL;
+
   return (
     <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
