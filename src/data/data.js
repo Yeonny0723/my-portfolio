@@ -154,19 +154,19 @@ export const skillsetData = {
 export const experienceData = [
     {
         date: "Nov 7 2022 ~ Now",
-        title: "Modern React & Redux coach at Alice",
-        contents: ["Etc: Tutoring 60 students about JSX, React, React Hooks, Jest, Docker theory and problem solving"],
+        title: "Modern React & Redux coach at Elice",
+        contents: ["Etc: Tutoring 60 students about JSX, React, React Hooks, Jest and Redux theory and problem solving"],
     },
-    {
-        date: "Dec 2021 - April 2022 [5mos]",
-        title: "Balinne Full-stack freelancer",
-        contents: [
-            "FE: Responsive website view, Dynamic menu bar, Provide multi-lang, Flash message",
-            "BE: Sending direct email on web, Social login authentication, Auto delivery address updates on purchase, Search address using Post Address API",
-            "DB: ERD modeling for ordering & payment system",
-            "Etc: Web hosting with AWS elastic beans, Cloud S3 storage, Functional & non-functional requirements report, Wrote terms of privacy policy ",
-        ],
-    },
+    // {
+    //     date: "Dec 2021 - April 2022 [5mos]",
+    //     title: "Balinne Full-stack freelancer",
+    //     contents: [
+    //         "FE: Responsive website view, Dynamic menu bar, Provide multi-lang, Flash message",
+    //         "BE: Sending direct email on web, Social login authentication, Auto delivery address updates on purchase, Search address using Post Address API",
+    //         "DB: ERD modeling for ordering & payment system",
+    //         "Etc: Web hosting with AWS elastic beans, Cloud S3 storage, Functional & non-functional requirements report, Wrote terms of privacy policy ",
+    //     ],
+    // },
     {
         date: "Oct 2021 - Dec 2021 [2mos]",
         title: "UN Research Volunteer",

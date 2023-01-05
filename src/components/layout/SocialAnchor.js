@@ -8,7 +8,7 @@ const Anchors = () => {
             <a target="_blank" href="mailto:kkjuyeon@gmail.com" rel="noreferrer"><i className="fa-solid fa-envelope fa-2xl" /></a>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <a target="_blank" href="https://www.youtube.com/channel/UCNKzJr3lPwz13sCzrDCuc1A" rel="noreferrer"><i className="fa-brands fa-youtube fa-2xl"></i></a>
-            <a target="_blank" href="https://velog.io/@kkjuyeon" rel="noreferrer"><i className="fa-brands fa-blogger fa-2xl"></i></a>
+            <a target="_blank" href="https://graceful-canary-e9f.notion.site/History-5bc12ab684a04089b675ca4fcd071f09" rel="noreferrer"><i className="fa-brands fa-blogger fa-2xl"></i></a>
         </SnsStyle>
     )
 }

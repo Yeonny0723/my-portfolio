@@ -10,9 +10,12 @@ const WelcomeSlide = ({setSkip, i18n}) => {
     }
 
     useEffect(()=>{
-        setTimeout(()=>{
+        const timer = setTimeout(()=>{
             setSkip(true);
         }, 10000);
+        return ()=>{
+            clearTimeout(timer);
+        }
     },[]);
 
     return (
