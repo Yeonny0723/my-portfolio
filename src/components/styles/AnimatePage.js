@@ -74,7 +74,8 @@ export const Bounce = ({ children }) => {
 export const BounceUp = ({ children }) => {
   const transitionValues = {
     duration: 0.5,
-    yoyo: Infinity,
+    repeatType: "mirror",
+    repeat: Infinity,
     ease: "easeInOut",
   };
   return (

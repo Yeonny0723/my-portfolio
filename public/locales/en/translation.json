@@ -1,25 +1,27 @@
 {
-    "home":{
-        "title": "Warm welcome!",
-        "click": "Click to continue!",
-        "lang": ["Select your", "language"],
-        "comment": ["Hi", "is converted & visualized to binary code using utf8 encoding"]
+  "home": {
+    "title": "Warm welcome!",
+    "click": "Click to continue!",
+    "lang": ["Select your", "language"],
+    "comment": [
+      "Hi",
+      "is converted & visualized to binary code using utf8 encoding"
+    ]
+  },
+  "profile": {
+    "skip": "Click screen to skip",
+    "intro": {
+      "0": "Hi there 👋 This is Juyeon who...",
+      "1": "focus on the 'value' which I can bring to the world",
+      "2": "constantly learn and study to be a better me than yesterday",
+      "3": "is ready to resolve a big world problem as a team player",
+      "4": "try to write sustainable and team code."
     },
-    "profile":{
-        "skip": "Click screen to skip",
-        "intro": {
-            "0": "Hi there 👋 This is Juyeon who...",
-            "1": "wants to leave a mark on the world and focus on the 'value' which I can bring to the world",
-            "2": "constantly learn and study to be a better me than yesterday keeping 1 day 1 commit",
-            "3": "is ready to work in a team to resolve a big world problem through programming club, group projects, and mentoring activities",
-            "4": "is a fast-learner can achieve max productivity."
-        },
-        "terminal": "← press the button below to find me out more ↓",
-        "experience": [],
-        "education": []
-    },
-    "portfolio":{
-        "myStory": "I believe that being able to speak a language means more than a means of communication but wider connections and opportunities. I studied economics and finance until 20. Apart from my school studies, with my obsession with language learning, I was able to acquire ITT interpretation & translation certificates for both Vietnamese & English and imagined myself to be a cool interpreter!\n The reason I chose to change my career path as a developer was very simple. About 3 years ago, in an interview with a Silicon Valley engineer on a YouTube channel called EO, I was captivated by programming looking at how powerful it is to be able to deliver values to the world! I transferred and switched my major without hesitation to Information systems and studied computer science basics/programming along with a strategic business process management approach using IT technology and was able to graduate with high distinction. \n I enjoy the whole process of problem-solving and I am particularly interested in back-end development/full-stack development. And I have this motto, to be better me than yesterday. With fire in my belly, I've tried my best to achieve what I believe is right by all means and it turned out successful after all. ",
-        "pvSkill": "I had experience as a data engineer intern at MyCelebs, which enhances the search experience of users with differentiated key talk recommendation technology. \n At the time of the initial project, people had sorted the same cosmetics manually from different shopping malls as they all have different formats of title text & images by its seller. \n I and our team had this goal to create a model to sort the items by their title and image model to remove the manual sorting work.  \n  I was in charge of collecting more than 10 million data and creating NLP models I think it's nearly impossible for a team of just three people to get millions of pieces of data from collection to modeling in less than three months with not sufficient resources.\n In the process of collecting data, data loss could not be avoided due to unexpected network and server issues. By categorizing all the possible issues with highly reusable code, I practiced the concept of polymorphism, OOP, and encapsulation principles. \n Moreover, I improved the model accuracy by about 5% through preprocessing by patterning and pre-processed stopwords in the titles that are described out of pattern depending on the content creator and created an NFT model using Mecab and TF-idf. \n "
-    }
+    "terminal": "← press the button below to find me out more ↓",
+    "experience": [],
+    "education": []
+  },
+  "portfolio": {
+    "myStory": "I studied Economics ana languages (English, Vietnamese) by 20. I was able to acquire ITT interpretation & translation certificates and imagined myself to be a cool interpreter! The reason I chose to change my career path as a developer was very simple. I watched an interview with programmer and was immediately captivated by programming looking at how powerful it is to be able to deliver values to the world! I switched my major without hesitation to Information systems and studied basic computer science/programming along with a IT strategic business process management I and was able to graduate with HD. I enjoy the entire problem-solving process and working as a team. Given that front-end engineer can observe immediate user reaction and feedback and the fast-paced changing trend environment, I am particularly interested in front-end engineering.    "
+  }
 }
