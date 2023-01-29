@@ -14,7 +14,7 @@ const Portfolio = () => {
         <span>
           요약본은 &nbsp;
           <a
-            href="https://graceful-canary-e9f.notion.site/Juyeon-Kim-2a4e78ee019a4c0db4b56df3a6c8f1d1"
+            href="https://graceful-canary-e9f.notion.site/584bad5911cb4b899b46ec8fe97ce9ce?v=282b66f569ca41a7959d9da5065ee220"
             target="_blank"
             style={{ color: TEXT_PINK }}
             rel="noreferrer"
@@ -27,7 +27,7 @@ const Portfolio = () => {
         <span>
           Find out the &nbsp;
           <a
-            href="https://graceful-canary-e9f.notion.site/Juyeon-Kim-2a4e78ee019a4c0db4b56df3a6c8f1d1"
+            href="https://graceful-canary-e9f.notion.site/584bad5911cb4b899b46ec8fe97ce9ce?v=282b66f569ca41a7959d9da5065ee220"
             target="_blank"
             style={{ color: TEXT_PINK }}
             rel="noreferrer"

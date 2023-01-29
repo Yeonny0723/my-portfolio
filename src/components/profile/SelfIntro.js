@@ -25,7 +25,7 @@ const SelfIntro = () => {
       <div>
         <ResumeButtonStyle
           target="_blank"
-          href="https://graceful-canary-e9f.notion.site/Yeonny-who-focus-on-which-value-which-I-can-deliver-61b246d9cd5341d692ba3d6443330720"
+          href="https://graceful-canary-e9f.notion.site/Juyeon-Kim-2a4e78ee019a4c0db4b56df3a6c8f1d1"
         >
           <i className="fa-regular fa-file fa-lg"></i>&nbsp;Resume
         </ResumeButtonStyle>
