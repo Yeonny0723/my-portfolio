@@ -208,7 +208,7 @@ export const ShakingImageAnimate = ({ clicked, src }) => {
           ? [10, -10, 10, -10, 5, -5, 3, -3]
           : [-10, 10, -10, 10, -5, 5, -3, 3],
         opacity: 1,
-        duration: 0.5,
+        duration: 2,
         transition: {
           ease: "circOut",
         },

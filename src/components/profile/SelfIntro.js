@@ -41,7 +41,7 @@ const ResumeButtonStyle = styled.a`
   width: fit-content;
   height: fit-content;
   padding: calc(0px + 0.6vw);
-  border-radius: 15px;
+  border-radius: 10px;
   transition: 0.1s linear;
   color: white;
   &:hover,

@@ -10,17 +10,17 @@ const Card = (props) => {
   const onClick = () => {
     setIsOpened(!isOpen);
     const inactiveScreen = document.getElementById("screen-inactive");
-    inactiveScreen.classList.toggle("screen-inactive");
+    inactiveScreen.classList.toggle("hide");
   };
 
   return (
     <div>
       <CardStyled
         isopen={isOpen ? 1 : 0}
+        onClick={onClick}
         thumburl={props.props.thumbnail}
         transition={{ layout: { duration: 1, type: "spring" } }}
         layout
-        onClick={onClick}
         whileHover={{
           scale: 0.98,
           opacity: isOpen ? 1 : 0.7,
@@ -55,7 +55,7 @@ const Card = (props) => {
                 <i
                   className="fa-solid fa-calendar-days fa-lg"
                   style={{ color: TEXT_PINK }}
-                ></i>{" "}
+                ></i>
                 &nbsp;{props.props.timeline}
               </p>
               <h5>
@@ -89,8 +89,8 @@ const CardStyled = styled(motion.div)`
   box-shadow: ${SHADOW};
   border-radius: 2rem;
   background-size: cover;
-  z-index: 10;
   overflow: scroll;
+  z-index: 5;
   background-color: ${(props) => (props.isopen ? "white" : "rgba(0,0,0,0.15)")};
   color: ${(props) => (props.isopen ? "black" : "white")};
   background-image: ${(props) =>

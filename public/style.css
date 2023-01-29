@@ -60,3 +60,7 @@ h6 {
 a {
   text-decoration: none;
 }
+
+.hide {
+  display: none !important;
+}

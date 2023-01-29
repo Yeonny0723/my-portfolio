@@ -8,7 +8,6 @@ import { TEXT_PINK } from "../components/styles/Variables";
 const Portfolio = () => {
   const content = (
     <PortfolioStyle>
-      <div id="screen-inactive"></div>
       <div>
         <h3>Portfolio</h3>
         <br></br>
@@ -40,6 +39,10 @@ const Portfolio = () => {
         <br></br>
         <Underline />
       </div>
+      <ScreenInactiveStyle
+        id="screen-inactive"
+        className="hide"
+      ></ScreenInactiveStyle>
       <CardRowStyle className="fadeUp">
         {projects
           .sort((a, b) => a.idx - b.idx)
@@ -56,6 +59,15 @@ const Portfolio = () => {
   );
 };
 
+const ScreenInactiveStyle = styled.div`
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+`;
+
 const CardRowStyle = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -71,14 +83,7 @@ const PortfolioStyle = styled.div`
   overflow: scroll;
   height: 100%;
   scroll-behavior: smooth !important;
-  .screen-inactive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
+  z-index: 5;
 `;
 
 export default Portfolio;

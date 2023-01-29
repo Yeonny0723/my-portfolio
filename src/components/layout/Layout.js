@@ -69,7 +69,7 @@ const BackgroundStyle = styled.div`
   left: 0;
   background-image: url("bg.png");
   background-color: tomato;
-  /* z-index: 0; */
+  z-index: 0;
   transition: all 0.5s;
   &:hover {
     transform: scale(1.2);
