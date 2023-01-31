@@ -2,7 +2,10 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import Typewriter from "typewriter-effect";
 
-const WelcomeSlide = ({ setSkip, i18n }) => {
+const WelcomeSlide: React.FC<{
+  setSkip: (skip: boolean) => void;
+  i18n: any;
+}> = ({ setSkip, i18n }) => {
   const handleSkip = () => {
     setSkip(true);
   };

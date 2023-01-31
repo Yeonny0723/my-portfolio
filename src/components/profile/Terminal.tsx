@@ -32,7 +32,7 @@ const Terminal = () => {
   );
 };
 
-const CodeLineStyle = styled.div`
+const CodeLineStyle = styled.div<{ indent: number }>`
   margin-left: ${(props) => props.indent}px;
   line-height: 1.7;
   span {
@@ -43,10 +43,14 @@ const CodeLineStyle = styled.div`
   }
 `;
 
-const CodeLine = ({ white, green, indent }) => {
-  indent = indent * 10;
+const CodeLine: React.FC<{ white: string; green: string; indent: number }> = ({
+  white,
+  green,
+  indent,
+}) => {
+  const _indent = indent * 10;
   return (
-    <CodeLineStyle indent={indent}>
+    <CodeLineStyle indent={_indent}>
       <span>{white} </span>
       <span>{green}</span>
     </CodeLineStyle>

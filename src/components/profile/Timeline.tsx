@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { TEXT_PINK, INACTIVE } from "../styles/Variables";
 
-const TimeLine = ({ data }) => {
+const TimeLine: React.FC<{
+  data: { date: string; title: string; contents: string[] }[];
+}> = ({ data }) => {
   return (
     <>
       {data.map((exp, idx) => {
@@ -19,7 +21,13 @@ const TimeLine = ({ data }) => {
                   ? contents
                   : contents.map((content, idx) => (
                       <li key={idx}>
-                        <span>{content}</span>
+                        {content.startsWith("<a") ? (
+                          <span
+                            dangerouslySetInnerHTML={{ __html: content }}
+                          ></span> // convert a string into a html element
+                        ) : (
+                          <span>{content}</span>
+                        )}
                       </li>
                     ))}
               </ul>

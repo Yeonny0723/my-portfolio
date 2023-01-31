@@ -1,16 +1,31 @@
 import { motion } from "framer-motion";
+import React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { DARK_SHADOW, SHADOW, TEXT_PINK } from "../styles/Variables";
 
-const Card = (props) => {
+interface ICard {
+  contents: {
+    idx: number;
+    title: string;
+    thumbnail: any;
+    link: string;
+    preview: any;
+    timeline: string;
+    desc: string;
+    skills: string;
+    takeaway: string[];
+  };
+}
+
+const Card: React.FC<ICard> = ({ contents }) => {
   const [isOpen, setIsOpened] = useState(false);
 
   // Card event
   const onClick = () => {
     setIsOpened(!isOpen);
     const inactiveScreen = document.getElementById("screen-inactive");
-    inactiveScreen.classList.toggle("hide");
+    inactiveScreen?.classList.toggle("hide");
   };
 
   return (
@@ -18,7 +33,7 @@ const Card = (props) => {
       <CardStyled
         isopen={isOpen ? 1 : 0}
         onClick={onClick}
-        thumburl={props.props.thumbnail}
+        thumburl={contents.thumbnail}
         transition={{ layout: { duration: 1, type: "spring" } }}
         layout
         whileHover={{
@@ -28,7 +43,7 @@ const Card = (props) => {
         }}
       >
         <motion.h4 layout="position">
-          <em>{props.props.title} </em>
+          <em>{contents.title} </em>
         </motion.h4>
         {isOpen && (
           <CardOpen
@@ -37,11 +52,11 @@ const Card = (props) => {
             transition={{ duration: 1 }}
             layout
           >
-            <img src={props.props.preview} alt="project preview img" />
+            <img src={contents.preview} alt="project preview img" />
             <div>
               <h4>Description</h4>
               <a
-                href={props.props.link}
+                href={contents.link}
                 target="_blank"
                 style={{ color: TEXT_PINK }}
                 rel="noreferrer"
@@ -56,22 +71,22 @@ const Card = (props) => {
                   className="fa-solid fa-calendar-days fa-lg"
                   style={{ color: TEXT_PINK }}
                 ></i>
-                &nbsp;{props.props.timeline}
+                &nbsp;{contents.timeline}
               </p>
               <h5>
                 <em># Summary</em>
               </h5>
-              <Pstyle>{props.props.desc}</Pstyle>
+              <Pstyle>{contents.desc}</Pstyle>
               <h5>
                 <em># Skills</em>
               </h5>
-              <p>{props.props.skills}</p>
+              <p>{contents.skills}</p>
               <h5>
                 <em># Takeaway</em>
               </h5>
               <ul>
                 <p>
-                  {props.props.takeaway.map((el, idx) => (
+                  {contents.takeaway.map((el, idx) => (
                     <li key={idx}>{el}</li>
                   ))}
                 </p>
@@ -84,7 +99,23 @@ const Card = (props) => {
   );
 };
 
-const CardStyled = styled(motion.div)`
+interface ICardStyled {
+  readonly isopen: number;
+  readonly thumburl: string;
+  readonly transition: {
+    layout: {
+      duration: number;
+      type: string;
+    };
+  };
+  readonly whileHover: {
+    scale: number;
+    opacity: number;
+    duration: number;
+  };
+}
+
+const CardStyled = styled(motion.div)<ICardStyled>`
   padding: 2.5vw 5vw;
   box-shadow: ${SHADOW};
   border-radius: 2rem;

@@ -47,7 +47,7 @@ const Portfolio = () => {
         {projects
           .sort((a, b) => a.idx - b.idx)
           .map((props, idx) => (
-            <Card props={props} key={idx} />
+            <Card contents={props} key={idx} />
           ))}
       </CardRowStyle>
     </PortfolioStyle>

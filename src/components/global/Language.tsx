@@ -1,22 +1,46 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
-import { GREY } from "../styles/Variables";
+import { NavStyle, ButtonStyle } from "./Language.styles";
 
 const initialLangSetting = {
   // 서로 다른 Language 컴포넌트 간 같은 값 업데이트하고 그게 모든 Language 컴포넌트에 반영되도록
   lang: "en",
 };
 
-const Language = ({ color }) => {
+const LANGUAGE_LST = {
+  en: "English",
+  kr: "한국어",
+  vn: "Tiếng Việt",
+};
+
+interface LanguageProps {
+  color: string;
+}
+
+const Language: React.FC<LanguageProps> = ({ color }) => {
   const { i18n } = useTranslation(); // multi language
 
-  const changeLanguage = (lang) => {
+  const changeLanguage = (lang: string): void => {
     i18n.changeLanguage(lang);
     initialLangSetting.lang = lang;
   };
 
   return (
     <NavStyle>
+      {/* <>
+        {Object.keys(LANGUAGE_LST).map((LANG) => {
+          <>
+            <ButtonStyle
+              onClick={() => changeLanguage(LANG)}
+              isactive={LANG === initialLangSetting[LANG]}
+              color={color}
+            >
+              <span>{LANGUAGE_LST[LANG]}</span>
+            </ButtonStyle>
+            <span>|</span>
+          </>;
+        })}
+      </> */}
       <ButtonStyle
         onClick={() => changeLanguage("en")}
         isactive={initialLangSetting.lang === "en"}
@@ -43,27 +67,5 @@ const Language = ({ color }) => {
     </NavStyle>
   );
 };
-
-const NavStyle = styled.nav`
-  height: fit-content;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2vh;
-  font-size: 1.3rem;
-  & > span {
-    color: ${GREY};
-  }
-`;
-
-const ButtonStyle = styled.button`
-  font-weight: 600;
-  text-decoration: ${(props) => (props.isactive ? "underline" : null)};
-  color: ${(props) => (props.isactive ? props.color : GREY)};
-  background: none;
-  border: none;
-  margin: 0 0.5vw;
-  padding: 0;
-  cursor: pointer;
-`;
 
 export default Language;
