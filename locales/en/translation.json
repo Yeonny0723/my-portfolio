@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": "Warm welcome!",
+    "click": "Click to continue!",
+    "lang": ["Select your", "language"],
+    "comment": [
+      "Hi",
+      "is converted & visualized to binary code using utf8 encoding"
+    ]
+  },
+  "profile": {
+    "skip": "Click screen to skip",
+    "intro": {
+      "0": "Hi there 👋 This is Juyeon who...",
+      "1": "focus on the 'value' which I can bring to the world",
+      "2": "constantly learn and study to be a better me than yesterday",
+      "3": "is ready to resolve a big world problem as a team player",
+      "4": "try to write sustainable and team code."
+    },
+    "terminal": "← press the button below to find me out more ↓",
+    "experience": [],
+    "education": []
+  },
+  "portfolio": {
+    "myStory": "I studied Economics ana languages (English, Vietnamese) by 20. I was able to acquire ITT interpretation & translation certificates and imagined myself to be a cool interpreter! The reason I chose to change my career path as a developer was very simple. I watched an interview with programmer and was immediately captivated by programming looking at how powerful it is to be able to deliver values to the world! I switched my major without hesitation to Information systems and studied basic computer science/programming along with a IT strategic business process management I and was able to graduate with HD. I enjoy the entire problem-solving process and working as a team. Given that front-end engineer can observe immediate user reaction and feedback and the fast-paced changing trend environment, I am particularly interested in front-end engineering.    "
+  }
+}
