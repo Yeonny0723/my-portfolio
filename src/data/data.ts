@@ -1,3 +1,4 @@
+// 이미지 import를 위한 @types/globa/index.d.ts 내 모듈 설정
 import film_memories from "../img/projects/film-emories.jpeg";
 import soundTrip from "../img/projects/soundTrip.png";
 import myPortfolio from "../img/projects/myPortfolio.png";
@@ -6,7 +7,6 @@ import balinneThumb from "../img/projects/balinne-thumb.jpeg";
 import oatmeal from "../img/projects/oatmeal.jpeg";
 import hotel from "../img/projects/hotel.jpeg";
 import potentialCustomer from "../img/projects/potentialCustomer.jpeg";
-import { VIVID_PINK } from "../components/styles/Variables";
 
 export const projects = [
   // Film-emories
@@ -162,14 +162,14 @@ export const experienceData = [
     title: "Programming Tutor at Elice",
     contents: [
       "Provide problem solving lecture: React, Redux, Jest, Styled components etc",
-      <a
-        style={{ color: VIVID_PINK }}
+      `<a
+        style = "color: #F08C6F;"
         target="_blank"
         rel="noreferrer"
         href="https://graceful-canary-e9f.notion.site/React-Tutoring-f6d7f371c0fa427dbcf33fe62a1e0579"
       >
         Tutoring material
-      </a>,
+      </a>`,
     ],
   },
   {
@@ -179,14 +179,14 @@ export const experienceData = [
       "Data scrapping & Error handling using Python, Selenium",
       "Wrote text preprocessing algorithm using Regular expression",
       "Managed DB using Sequel Pro, Pymysql",
-      <a
-        style={{ color: VIVID_PINK }}
+      `<a
+        style = "color: #F08C6F;"
         target="_blank"
         rel="noreferrer"
         href="https://graceful-canary-e9f.notion.site/1-48de072f0cda4d978c61fa98ef095b78"
       >
         Intern Summary
-      </a>,
+      </a>`,
     ],
   },
 ];
@@ -197,14 +197,15 @@ export const educationData = [
     title: "Majored Information systems at RMIT University [Graduated]",
     contents: [
       "GPA: 3.8/4.0",
-      <a
-        style={{ color: VIVID_PINK }}
+      `<a
+
+        style="color:#F08C6F"  
         target="_blank"
         rel="noreferrer"
         href="https://graceful-canary-e9f.notion.site/Uni-Coursework-aab41c38280c4ba2b8adcb4f57640d8b"
       >
         Course summary
-      </a>,
+      </a>`,
       "Project Management",
       "Web development",
       "SQL Data management",
@@ -216,15 +217,14 @@ export const educationData = [
     date: "May 2021 - Aug 2021",
     title: "Likelion AI school",
     contents: [
-      <a
-        style={{ color: VIVID_PINK }}
+      `<a
+        style="color:#F08C6F"  
         target="_blank"
         rel="noreferrer"
         href="https://github.com/Yeonny0723/food-safety-korea_contest"
       >
         Team Project
-      </a>,
-      "Team project",
+      </a>`,
       "Data analysis",
       "Data visualization",
       "Statistics / Web scrapping",

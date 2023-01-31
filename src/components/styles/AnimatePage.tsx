@@ -1,7 +1,12 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { SHADOW } from "./Variables";
 
-export const LeftSlide = ({ children }) => {
+interface IAnimationChildProps {
+  children?: JSX.Element | JSX.Element[];
+}
+
+export const LeftSlide: React.FC<IAnimationChildProps> = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 100 }}
@@ -14,7 +19,7 @@ export const LeftSlide = ({ children }) => {
   );
 };
 
-export const RightSlide = ({ children }) => {
+export const RightSlide: React.FC<IAnimationChildProps> = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
@@ -27,7 +32,7 @@ export const RightSlide = ({ children }) => {
   );
 };
 
-export const UpSlide = ({ children }) => {
+export const UpSlide: React.FC<IAnimationChildProps> = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -45,7 +50,7 @@ export const UpSlide = ({ children }) => {
   );
 };
 
-export const Bounce = ({ children }) => {
+export const Bounce: React.FC<IAnimationChildProps> = ({ children }) => {
   const transitionValues = {
     duration: 0.5,
     repeatType: "mirror",
@@ -71,7 +76,7 @@ export const Bounce = ({ children }) => {
   );
 };
 
-export const BounceUp = ({ children }) => {
+export const BounceUp: React.FC<IAnimationChildProps> = ({ children }) => {
   const transitionValues = {
     duration: 0.5,
     repeatType: "mirror",
@@ -93,7 +98,18 @@ export const BounceUp = ({ children }) => {
   );
 };
 
-export const Rotate360 = ({ children }) => {
+const rotate360Variants = {
+  repeat: Infinity,
+  repeatDelay: 1,
+  ease: "easeInOut",
+  type: "spring",
+  stiffness: 100,
+  scale: {
+    duration: 1,
+  },
+};
+
+export const Rotate360: React.FC<IAnimationChildProps> = ({ children }) => {
   return (
     <motion.div
       style={{
@@ -107,23 +123,21 @@ export const Rotate360 = ({ children }) => {
       }}
       initial={{ scale: 0 }}
       animate={{ rotate: 360, scale: 1 }}
-      transition={{
-        repeat: Infinity,
-        repeatDelay: 1,
-        ease: "easeInOut",
-        type: "spring",
-        stiffness: 100,
-        scale: {
-          duration: 1,
-        },
-      }}
+      transition={rotate360Variants}
     >
       {children}
     </motion.div>
   );
 };
 
-export const TextTitleAnimate = ({ children, duration }) => {
+type ITextTitleAnimate = IAnimationChildProps & {
+  duration: number;
+};
+
+export const TextTitleAnimate: React.FC<ITextTitleAnimate> = ({
+  children,
+  duration,
+}) => {
   return (
     <motion.div
       initial="hidden"
@@ -151,7 +165,7 @@ export const TextTitleAnimate = ({ children, duration }) => {
   );
 };
 
-export const FadeIn = ({ children }) => {
+export const FadeIn: React.FC<IAnimationChildProps> = ({ children }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -169,7 +183,9 @@ export const FadeIn = ({ children }) => {
   );
 };
 
-export const ButtonHoverScale = ({ children }) => {
+export const ButtonHoverScale: React.FC<IAnimationChildProps> = ({
+  children,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0.7, scale: 1 }}
@@ -199,7 +215,15 @@ export const ButtonHoverScale = ({ children }) => {
   );
 };
 
-export const ShakingImageAnimate = ({ clicked, src }) => {
+type IShakingImageAnimate = IAnimationChildProps & {
+  clicked: boolean;
+  src: string;
+};
+
+export const ShakingImageAnimate: React.FC<IShakingImageAnimate> = ({
+  clicked,
+  src,
+}) => {
   return (
     <motion.img
       animate={{
@@ -208,7 +232,7 @@ export const ShakingImageAnimate = ({ clicked, src }) => {
           ? [10, -10, 10, -10, 5, -5, 3, -3]
           : [-10, 10, -10, 10, -5, 5, -3, 3],
         opacity: 1,
-        duration: 2,
+        // duration: 2, //
         transition: {
           ease: "circOut",
         },
