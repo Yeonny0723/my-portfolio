@@ -120,8 +120,8 @@ const Skills = () => {
               {Object.keys(skillsetData).map((k) => (
                 <SkillSection key={k}>
                   <h5>#{k}</h5>
-                  {skillsetData[k].map((v) => (
-                    <img alt="skillset img" src={v} />
+                  {skillsetData[k].map((v, idx) => (
+                    <img key={idx} alt="skillset img" src={v} />
                   ))}
                   <HrStyle />
                 </SkillSection>
@@ -130,15 +130,15 @@ const Skills = () => {
                 <h5>#Languages</h5>
                 <div>
                   <h6>English 🇺🇸</h6>
-                  <Rating rating={5} />
+                  <Rating key={"eng"} rating={5} />
                 </div>
                 <div>
                   <h6>Korean 🇰🇷 </h6>
-                  <Rating rating={5} />
+                  <Rating key={"kr"} rating={5} />
                 </div>
                 <div>
                   <h6>Vietnamese 🇻🇳 </h6>
-                  <Rating rating={3} />
+                  <Rating key={"vn"} rating={3} />
                 </div>
               </SkillSection>
             </FadeIn>

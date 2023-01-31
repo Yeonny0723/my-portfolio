@@ -8,7 +8,7 @@ const Anchors = () => {
         href="https://graceful-canary-e9f.notion.site/Juyeon-Kim-2a4e78ee019a4c0db4b56df3a6c8f1d1"
         rel="noreferrer"
       >
-        <i class="fa-sharp fa-solid fa-file fa-2xl" />
+        <i className="fa-sharp fa-solid fa-file fa-2xl" />
       </a>
       <a target="_blank" href="https://github.com/Yeonny0723" rel="noreferrer">
         <i className="fa-brands fa-github fa-2xl" />
