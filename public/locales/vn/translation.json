@@ -1,27 +1,27 @@
 {
-    "home":{
-        "title": "Xin chào các bạn",
-        "click":"Xem tiếp",
-        "lang": ["Chọn", "ngôn ngữ"],
-        "comment": ["Chào", "được chuyển thành binary code dụng utf8"]
+  "home": {
+    "title": "Xin chào các bạn",
+    "click": "Xem tiếp",
+    "lang": ["Chọn", "ngôn ngữ"],
+    "comment": ["Chào", "được chuyển thành binary code dụng utf8"]
+  },
+  "profile": {
+    "skip": "nhấp để tiếp theo",
+    "intro": {
+      "0": "Chào các bạn 👋 Đây là Juyeon (a.k.a Susu)",
+      "1": "focus on the 'value' which I can bring to the world",
+      "2": "constantly learn and study to be a better me than yesterday",
+      "3": "is ready to resolve a big world problem as a team player",
+      "4": "try to write sustainable and team code."
     },
-    "profile":{
-        "skip": "Click screen to skip",
-        "intro": {
-            "0": "Hi there 👋 This is Juyeon who...",
-            "1": "wants to leave a mark on the world and focus on the 'value' which I can bring to the world",
-            "2": "constantly learn and study to be a better me than yesterday",
-            "3": "is ready to work in a team to resolve a big world problem",
-            "4": "is a fast learner and can work at a very fast pace"
-        },
-        "terminal": "Press ← button below to find me out more ↓",
-        "experience": [],
-        "education": []
-    },
-    "portfolio":{
-        "balinne":{
-            "summary":"",
-            "takeaway":""
-        }
+    "terminal": "Nhấn nút ← dưới để tìm Susu tiếp↓",
+    "experience": [],
+    "education": []
+  },
+  "portfolio": {
+    "balinne": {
+      "summary": "",
+      "takeaway": ""
     }
+  }
 }
