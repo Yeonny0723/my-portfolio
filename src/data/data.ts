@@ -1,4 +1,5 @@
 // 이미지 import를 위한 @types/globa/index.d.ts 내 모듈 설정
+import gui_tree from "../img/projects/gui_tree.png";
 import film_memories from "../img/projects/film-emories.jpeg";
 import soundTrip from "../img/projects/soundTrip.png";
 import myPortfolio from "../img/projects/myPortfolio.png";
@@ -9,6 +10,21 @@ import hotel from "../img/projects/hotel.jpeg";
 import potentialCustomer from "../img/projects/potentialCustomer.jpeg";
 
 export const projects = [
+  // GUI Tree
+  {
+    idx: -1, // You can specify display order here
+    title: "File System Tree GUI",
+    thumbnail: gui_tree,
+    link: "https://github.com/Yeonny0723/tree-gui",
+    preview: gui_tree,
+    timeline: "2023.Jan.23 ~ 2023.Jan.26",
+    desc: "This is an GUI application that updates file system tree graph by user inputting commands. ",
+    skills: "React, Redux-toolkit, lodash, styled-component, typescript",
+    takeaway: [
+      "Recursive component rendering of state with unknown depth",
+      "Exception handling",
+    ],
+  },
   // Film-emories
   {
     idx: 0, // You can specify display order here
@@ -21,7 +37,7 @@ export const projects = [
     skills:
       "Pug, Webpack, Babel, SCSS, WebAssembly, FFmpeg, Express, Ajax, MongoDB",
     takeaway: [
-      "I used the modern JS ES6 and compiled them using webpack and babel. I accept this MVC divide and conquer pattern to avoid duplicates and for easy maintenance and reusability. I used WebAssembly to allow the big program like ffmpeg to be able to run on the browser. The recorded video is later saved to the browser memory which reduces the burden on the server. I am now comfortable customizing middlewares / making use of sessions and cookies / creating API.",
+      "I used the modern JS ES6 and compiled them using webpack and babel. I used webassembly-based ffmpeg to be able to run on the javascript environment. The recorded video is later saved to the browser memory which reduces the burden on the server. I am now comfortable customizing middlewares / making use of sessions and cookies / creating API.",
     ],
   },
   // My portfolio
