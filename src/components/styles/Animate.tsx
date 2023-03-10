@@ -1,67 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { SHADOW } from "./Variables";
+import { IAnimateChild } from "./types";
 
-interface IAnimationChildProps {
-  children?: JSX.Element | JSX.Element[];
-}
-
-export const LeftSlide: React.FC<IAnimationChildProps> = ({ children }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -100 }}
-      transition={{ duration: 1.5 }}
-    >
-      {children}
-    </motion.div>
-  );
+type IAnimateText = IAnimateChild & {
+  duration: number;
 };
 
-export const RightSlide: React.FC<IAnimationChildProps> = ({ children }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 100 }}
-      transition={{ duration: 1.5 }}
-    >
-      {children}
-    </motion.div>
-  );
+type IShakeImg = IAnimateChild & {
+  clicked: boolean;
+  src: string;
 };
 
-export const UpSlide: React.FC<IAnimationChildProps> = ({ children }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{
-        y: {
-          ease: "easeInOut",
-          duration: 1.5,
-        },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
+export const TRANSITION_VARIANT = {
+  duration: 0.5,
+  repeatType: "mirror",
+  repeat: Infinity,
+  ease: "easeInOut",
 };
 
-export const Bounce: React.FC<IAnimationChildProps> = ({ children }) => {
-  const transitionValues = {
-    duration: 0.5,
-    repeatType: "mirror",
-    repeat: Infinity,
-    ease: "easeInOut",
-  };
+export const Bounce = ({ children }: IAnimateChild): JSX.Element => {
   return (
     <motion.div
       transition={{
         delay: 0.5,
-        y: transitionValues,
+        y: TRANSITION_VARIANT,
       }}
       animate={{
         y: ["-1.5vh", "2.5vh"],
@@ -76,18 +39,12 @@ export const Bounce: React.FC<IAnimationChildProps> = ({ children }) => {
   );
 };
 
-export const BounceUp: React.FC<IAnimationChildProps> = ({ children }) => {
-  const transitionValues = {
-    duration: 0.5,
-    repeatType: "mirror",
-    repeat: Infinity,
-    ease: "easeInOut",
-  };
+export const BounceUp = ({ children }: IAnimateChild): JSX.Element => {
   return (
     <motion.div
       transition={{
         delay: 0.5,
-        y: transitionValues,
+        y: TRANSITION_VARIANT,
       }}
       animate={{
         y: ["0rem", "-1rem"],
@@ -98,7 +55,7 @@ export const BounceUp: React.FC<IAnimationChildProps> = ({ children }) => {
   );
 };
 
-const rotate360Variants = {
+const ROTATE_VARIANT = {
   repeat: Infinity,
   repeatDelay: 1,
   ease: "easeInOut",
@@ -109,7 +66,7 @@ const rotate360Variants = {
   },
 };
 
-export const Rotate360: React.FC<IAnimationChildProps> = ({ children }) => {
+export const Rotate360 = ({ children }: IAnimateChild): JSX.Element => {
   return (
     <motion.div
       style={{
@@ -123,21 +80,17 @@ export const Rotate360: React.FC<IAnimationChildProps> = ({ children }) => {
       }}
       initial={{ scale: 0 }}
       animate={{ rotate: 360, scale: 1 }}
-      transition={rotate360Variants}
+      transition={ROTATE_VARIANT}
     >
       {children}
     </motion.div>
   );
 };
 
-type ITextTitleAnimate = IAnimationChildProps & {
-  duration: number;
-};
-
-export const TextTitleAnimate: React.FC<ITextTitleAnimate> = ({
+export const ScaleText = ({
   children,
   duration,
-}) => {
+}: IAnimateText): JSX.Element => {
   return (
     <motion.div
       initial="hidden"
@@ -165,7 +118,7 @@ export const TextTitleAnimate: React.FC<ITextTitleAnimate> = ({
   );
 };
 
-export const FadeIn: React.FC<IAnimationChildProps> = ({ children }) => {
+export const FadeIn = ({ children }: IAnimateChild): JSX.Element => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -183,9 +136,7 @@ export const FadeIn: React.FC<IAnimationChildProps> = ({ children }) => {
   );
 };
 
-export const ButtonHoverScale: React.FC<IAnimationChildProps> = ({
-  children,
-}) => {
+export const HoverScale = ({ children }: IAnimateChild): JSX.Element => {
   return (
     <motion.div
       initial={{ opacity: 0.7, scale: 1 }}
@@ -215,15 +166,7 @@ export const ButtonHoverScale: React.FC<IAnimationChildProps> = ({
   );
 };
 
-type IShakingImageAnimate = IAnimationChildProps & {
-  clicked: boolean;
-  src: string;
-};
-
-export const ShakingImageAnimate: React.FC<IShakingImageAnimate> = ({
-  clicked,
-  src,
-}) => {
+export const ShakeImg = ({ clicked, src }: IShakeImg): JSX.Element => {
   return (
     <motion.img
       animate={{
@@ -232,7 +175,6 @@ export const ShakingImageAnimate: React.FC<IShakingImageAnimate> = ({
           ? [10, -10, 10, -10, 5, -5, 3, -3]
           : [-10, 10, -10, 10, -5, 5, -3, 3],
         opacity: 1,
-        // duration: 2, //
         transition: {
           ease: "circOut",
         },
