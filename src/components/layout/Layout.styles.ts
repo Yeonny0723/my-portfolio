@@ -33,22 +33,30 @@ export const LayoutStyle = styled.div`
   }
 `;
 
-export const WindowStyle = styled.div`
+export const LayoutSectionStyle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+  height: 8vh;
+`;
+
+export const HeaderStyle = styled(LayoutSectionStyle)`
+  align-items: flex-end;
+`;
+
+export const PageContentStyle = styled(LayoutSectionStyle)`
+  align-items: flex-start;
   height: 74vh;
   width: 100%;
   background-color: white;
   border: none;
   border-radius: 5vh;
   margin: 1vh;
-  padding: 7vh 6vw !important;
+  padding: 7vh 6vw;
   overflow: hidden;
   text-shadow: ${SHADOW};
 `;
 
-export const RowStyle = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const FooterStyle = styled(LayoutSectionStyle)`
   align-items: flex-start;
-  padding: 0 1.5vw;
-  height: 8vh;
 `;

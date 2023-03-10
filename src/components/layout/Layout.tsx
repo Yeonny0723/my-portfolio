@@ -1,61 +1,39 @@
 import React from "react";
-import { useState, useEffect } from "react";
-
+import { useCheckView } from "./hooks";
 import ScreenWarning from "../global/Warning";
-import SocialAnchor from "./SocialAnchor";
-import Navbar from "./Navbar";
-import Pagination from "./Pagination";
-import Language from "../global/Language";
+import HeaderContent from "./Header";
+import FooterContent from "./Footer";
+import PageContent from "./Content";
 
-import { randomPickAnimation } from "./AnimagePage";
-import { WHITE } from "../styles/Variables";
-import * as S from "./Layout.styles";
+import { BackgroundStyle, LayoutStyle } from "./Layout.styles";
+import { LayoutProps } from "./types";
 
-const Layout: React.FC<{ content: string }> = ({ content }) => {
-  const PageAnimation = randomPickAnimation();
-  const [isLandscape, setIsLandscape] = useState(false);
+const LandscapeContent = (): JSX.Element => {
+  return <ScreenWarning />;
+};
 
-  const handleResize = () => {
-    if (window.innerHeight > window.innerWidth) {
-      setIsLandscape(false);
-    } else {
-      setIsLandscape(true);
-    }
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      // cleanup
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+const PortraitContent = ({ children }: LayoutProps): JSX.Element => {
   return (
     <>
-      <S.BackgroundStyle />
-      <S.LayoutStyle>
+      <HeaderContent />
+      <PageContent>{children}</PageContent>
+      <FooterContent />
+    </>
+  );
+};
+
+const Layout = ({ children }: LayoutProps): JSX.Element => {
+  const [isLandscape] = useCheckView();
+  return (
+    <>
+      <BackgroundStyle />
+      <LayoutStyle>
         {isLandscape ? (
-          <>
-            <S.RowStyle style={{ alignItems: "flex-end" }}>
-              <Language color={WHITE} />
-              <Navbar />
-            </S.RowStyle>
-
-            <PageAnimation>
-              <S.WindowStyle>{content}</S.WindowStyle>
-            </PageAnimation>
-
-            <S.RowStyle style={{ alignItems: "flex-start" }}>
-              <SocialAnchor />
-              <Pagination />
-            </S.RowStyle>
-          </>
+          <PortraitContent>{children}</PortraitContent>
         ) : (
-          <ScreenWarning />
+          <LandscapeContent />
         )}
-      </S.LayoutStyle>
+      </LayoutStyle>
     </>
   );
 };
