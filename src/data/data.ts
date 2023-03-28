@@ -257,117 +257,111 @@ export const educationData = [
   },
 ];
 
+export const reservedWords = new Set([
+  "abstract",
+  "class",
+  "constructor",
+  "public",
+  "string",
+  "string,",
+  "number",
+  "number,",
+  "private",
+  "void",
+  "protected",
+  "return",
+  "extends",
+  "const",
+  "new",
+]);
+
 export const codeData = [
   {
-    white: "abstract class Human {",
-    green: "",
+    text: "abstract class Human {",
     size: 1,
   },
   {
-    white: "constructor (",
-    green: "",
+    text: "constructor (",
     size: 3,
   },
   {
-    white: "public",
-    green: "firstname: string, ",
+    text: "public firstname: string,",
     size: 5,
   },
   {
-    white: "public",
-    green: "lastname: string,",
+    text: "public lastname: string,",
     size: 5,
   },
   {
-    white: "public",
-    green: "nationality: string,",
+    text: "public nationality: string,",
     size: 5,
   },
   {
-    white: "protected",
-    green: "fav_algorithm: string,",
+    text: "protected fav_algorithm: string,",
     size: 5,
   },
   {
-    white: "protected",
-    green: "age: number,",
+    text: "protected age: number,",
     size: 5,
   },
   {
-    white: "private",
-    green: "hobby: string,",
+    text: "private hobby: string,",
     size: 5,
   },
   {
-    white: "private",
-    green: "mbti: string,",
+    text: "private mbti: string,",
     size: 5,
   },
   {
-    white: "){}",
-    green: "",
+    text: "){},",
     size: 3,
   },
   {
-    white: "abstract",
-    green: "welcome(): void",
+    text: "abstract welcome(): void",
     size: 3,
   },
   {
-    white: "getFullName(){",
-    green: "",
+    text: "getFullName(){",
     size: 3,
   },
   {
-    white: "return",
-    green: "`${this.firstname} ${this.lastname}`",
+    text: "return `${this.firstname} ${this.lastname}`",
     size: 5,
   },
   {
-    white: "}",
-    green: "",
+    text: "}",
     size: 3,
   },
   {
-    white: "}",
-    green: "",
+    text: "}",
     size: 1,
   },
   {
-    white: "class Developer",
-    green: "extends Human{",
+    text: "class Developer extends Human{",
     size: 1,
   },
   {
-    white: "welcome(){",
-    green: "",
+    text: "welcome(){",
     size: 3,
   },
   {
-    white: "",
-    green:
-      "console.log(`Welcome everybody!\n This is ${this.firstname} ${this.lastname}`)",
+    text: "console.log(`Welcome everybody!\n This is ${this.firstname} ${this.lastname}`)",
     size: 5,
   },
   {
-    white: "}",
-    green: "",
+    text: "}",
     size: 3,
   },
   {
-    white: "}",
-    green: "",
+    text: "}",
     size: 1,
   },
   {
-    white: "const juyeon = new Developer",
-    green:
-      '("Juyeon","Kim", "South Korea", "Greedy", 23, "Weekly tracking challenge, Cafe tour", "entj")',
+    text: 'const juyeon = new Developer ("Juyeon","Kim", "South Korea", "Greedy", 23, "Weekly tracking challenge, Cafe tour", "entj")',
     size: 1,
   },
   {
-    white: "juyeon.welcome();",
-    green: "",
+    text: "juyeon.welcome();",
     size: 1,
   },
 ];

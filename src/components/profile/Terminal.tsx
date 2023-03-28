@@ -1,97 +1,61 @@
-import styled from "styled-components";
-import { SHADOW } from "../styles/Variables";
-import { ButtonHoverScale } from "../styles/AnimatePage";
-import { codeData } from "../../data/data";
+import { HoverScale } from "../styles/Animate";
+import { codeData, reservedWords } from "../../data/data";
+import * as S from "./Terminal.styles";
 
 const Terminal = () => {
   return (
-    <TerminalContainerStyle>
-      <TerminalNavStyle>
-        <div style={{ backgroundColor: "tomato" }}></div>
-        <div style={{ backgroundColor: "#FFBF2E" }}></div>
-        <div style={{ backgroundColor: "#27CA40" }}></div>
-      </TerminalNavStyle>
+    <S.TerminalContainerStyle>
+      {/* Terminal Buttons */}
+      <S.BtnContainers>
+        <S.ButtonStyle color="tomato" />
+        <S.ButtonStyle color="#FFBF2E" />
+        <S.ButtonStyle color="#27CA40" />
+      </S.BtnContainers>
 
-      <TerminalCodesStyle>
+      {/* Terminal Content */}
+      <S.ContentStyle>
         {codeData.map((line, idx) => (
-          <CodeLine
-            key={idx}
-            white={line["white"]}
-            green={line["green"]}
-            indent={line["size"]}
-          />
+          <CodeLine key={idx} text={line.text} indent={line["size"]} />
         ))}
-      </TerminalCodesStyle>
+      </S.ContentStyle>
 
-      <ButtonHoverScale>
-        <a href="#history-container">
-          <em style={{ color: "black" }}>Click to run</em>
-        </a>
-      </ButtonHoverScale>
-    </TerminalContainerStyle>
+      {/* Command Run Button */}
+      <HoverScale>
+        <RunBtn />
+      </HoverScale>
+    </S.TerminalContainerStyle>
   );
 };
 
-const CodeLineStyle = styled.div<{ indent: number }>`
-  margin-left: ${(props) => props.indent}px;
-  line-height: 1.7;
-  span {
-    font-size: 0.95em;
-  }
-  & > span:last-child {
-    color: #43cb46;
-  }
-`;
+const RunBtn = () => {
+  return (
+    <a href="#history-container">
+      <em>Click to run</em>
+    </a>
+  );
+};
 
-const CodeLine: React.FC<{ white: string; green: string; indent: number }> = ({
-  white,
-  green,
+const CodeLine = ({
+  text,
   indent,
-}) => {
+}: {
+  text: string;
+  indent: number;
+}): JSX.Element => {
   const _indent = indent * 10;
   return (
-    <CodeLineStyle indent={_indent}>
-      <span>{white} </span>
-      <span>{green}</span>
-    </CodeLineStyle>
+    <S.CodeLineStyle indent={_indent}>{formatCodeLine(text)}</S.CodeLineStyle>
   );
 };
 
-const TerminalContainerStyle = styled.div`
-  height: 35vh;
-  width: 100%;
-  border-radius: 10px;
-  overflow: scroll;
-  background-color: #111827;
-  position: relative;
-  box-shadow: ${SHADOW};
-`;
-
-const TerminalNavStyle = styled.div`
-  display: flex;
-  align-items: center;
-  height: 15%;
-  width: 100%;
-  border-radius: 10px 10px 0px 0px;
-  background-color: #374151;
-  padding: min(1.5vh, 5px);
-  overflow: hidden;
-  position: sticky;
-  top: 0;
-  & > div {
-    border-radius: 100%;
-    margin-left: min(1vw, 10px);
-    width: min(1.5vw, 15px);
-    height: min(1.5vw, 15px);
+const formatCodeLine = (str: string) => {
+  let ans = [];
+  for (const word of str.split(" ")) {
+    if (reservedWords.has(word))
+      ans.push(<span className="word green">{word}</span>);
+    else ans.push(<span className="word">{word}</span>);
   }
-`;
-
-const TerminalCodesStyle = styled.div`
-  width: 100%;
-  color: white;
-  padding: 1vh;
-  display: flex;
-  flex-direction: column;
-`;
+  return ans;
+};
 
 export default Terminal;
